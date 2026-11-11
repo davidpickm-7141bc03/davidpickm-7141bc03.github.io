@@ -1,0 +1,2521 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>好吊操 - 竞技吊操动作与社区精选</title>
+  <meta name="description" content="好吊操聚焦竞技吊操动作解析、训练体系与赛事动态，收录吊环悬垂、十字支撑、慢翻上等技巧条目，适合体操爱好者与力量训练者查阅。">
+  <meta name="keywords" content="好吊操">
+  <style>
+    :root {
+      --primary: #1b4d3e;
+      --primary-light: #2a6b56;
+      --primary-dark: #0e2e24;
+      --accent: #e6a13c;
+      --accent-light: #f5d9a8;
+      --bg: #f7f9f7;
+      --surface: #ffffff;
+      --text-primary: #1a2e28;
+      --text-secondary: #4a6259;
+      --text-tertiary: #7a8f86;
+      --border: #dfe7e3;
+      --radius-card: 16px;
+      --radius-btn: 10px;
+      --radius-tag: 6px;
+      --radius-banner: 20px;
+      --shadow-default: 0 2px 12px rgba(27, 77, 62, 0.07);
+      --shadow-hover: 0 8px 24px rgba(27, 77, 62, 0.12);
+      --font-sans: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --line-height: 1.7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: var(--line-height);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ===== 吸顶公告条 ===== */
+    .announcement-bar {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      background: var(--primary-dark);
+      color: #fff;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 24px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .announcement-brand {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+      color: var(--accent-light);
+    }
+
+    .announcement-items {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+      flex: 1;
+      justify-content: flex-end;
+    }
+
+    .announcement-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .announcement-item .date {
+      color: var(--accent-light);
+      font-weight: 600;
+    }
+
+    .announcement-item .item-name {
+      color: #d4e6de;
+    }
+
+    .announcement-item .count {
+      background: var(--accent);
+      color: var(--primary-dark);
+      padding: 1px 8px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    /* ===== 吸顶页头 ===== */
+    .site-header {
+      position: sticky;
+      top: 36px;
+      z-index: 190;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+
+    .header-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      gap: 16px;
+    }
+
+    .brand-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .main-nav a {
+      padding: 6px 12px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      background: var(--primary-light);
+      color: #fff;
+      outline: none;
+    }
+
+    .main-nav a:focus-visible {
+      box-shadow: 0 0 0 3px var(--accent-light);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .header-search {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-btn);
+      overflow: hidden;
+      background: var(--surface);
+      transition: border-color 0.2s;
+    }
+
+    .header-search:focus-within {
+      border-color: var(--primary-light);
+    }
+
+    .header-search input {
+      border: none;
+      outline: none;
+      padding: 6px 10px;
+      font-size: 13px;
+      width: 150px;
+      font-family: inherit;
+      background: transparent;
+      color: var(--text-primary);
+    }
+
+    .header-search input::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    .header-search button {
+      padding: 6px 10px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+
+    .header-search button:hover {
+      background: var(--primary-dark);
+    }
+
+    .hamburger-btn {
+      display: none;
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-btn);
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+      transition: background 0.2s;
+    }
+
+    .hamburger-btn span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .hamburger-btn:hover {
+      background: var(--border);
+    }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, #2e7d5e 100%);
+      color: #fff;
+      padding: 64px 24px 56px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: -60px;
+      top: -80px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: 40px;
+      bottom: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(230, 161, 60, 0.18);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      flex: 1 1 540px;
+      min-width: 0;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(230, 161, 60, 0.2);
+      color: var(--accent-light);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(230, 161, 60, 0.35);
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900;
+      letter-spacing: 2px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #cfe3d9;
+      max-width: 620px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: var(--radius-btn);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(230, 161, 60, 0.35);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: var(--radius-btn);
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-visual {
+      flex: 0 0 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.2));
+    }
+
+    /* ===== 主布局 ===== */
+    .main-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* ===== 左频道索引 ===== */
+    .channel-sidebar {
+      position: sticky;
+      top: 108px;
+    }
+
+    .channel-nav {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 16px 0;
+      overflow: hidden;
+    }
+
+    .channel-nav-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      padding: 0 20px 10px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 6px;
+    }
+
+    .channel-nav a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s, padding-left 0.15s;
+      border-left: 3px solid transparent;
+    }
+
+    .channel-nav a:hover,
+    .channel-nav a.active {
+      background: #eef4f0;
+      color: var(--primary);
+      border-left-color: var(--accent);
+      padding-left: 22px;
+    }
+
+    .channel-nav a .badge {
+      font-size: 11px;
+      background: var(--accent-light);
+      color: var(--primary-dark);
+      padding: 0 7px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    /* ===== 中主内容 ===== */
+    .main-content {
+      min-width: 0;
+    }
+
+    .content-section {
+      margin-bottom: 44px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-header h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: 0.5px;
+    }
+
+    .section-header .section-sub {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    /* 概览 */
+    .overview-text {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 24px 28px;
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+
+    .overview-text p {
+      margin-bottom: 12px;
+    }
+
+    .overview-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-img-wrap {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #dce8e2;
+    }
+
+    .card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .content-card:hover .card-img-wrap img {
+      transform: scale(1.03);
+    }
+
+    .card-type-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(27, 77, 62, 0.88);
+      color: #fff;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: var(--radius-tag);
+      backdrop-filter: blur(4px);
+    }
+
+    .card-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .tag-list {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 11px;
+      background: #eef4f0;
+      color: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      white-space: nowrap;
+    }
+
+    .card-stat {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .update-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 12px 16px;
+      background: var(--surface);
+      border-radius: 10px;
+      transition: background 0.15s;
+    }
+
+    .update-item:hover {
+      background: #f0f6f2;
+    }
+
+    .update-date {
+      flex-shrink: 0;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      font-weight: 600;
+      min-width: 64px;
+      padding-top: 2px;
+    }
+
+    .update-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .update-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .update-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow-default);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border: 1.5px solid transparent;
+    }
+
+    .category-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--accent-light);
+    }
+
+    .category-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .category-count {
+      font-size: 12px;
+      color: var(--text-tertiary);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 28px 30px;
+    }
+
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin: 24px 0 10px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+
+    .deep-dive ul {
+      margin: 8px 0 14px 0;
+      padding-left: 4px;
+    }
+
+    .deep-dive li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 4px 0 4px 20px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .deep-dive li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 13px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .deep-dive .data-note {
+      background: #f2f8f4;
+      border-left: 3px solid var(--primary-light);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin: 12px 0;
+    }
+
+    /* 指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: var(--shadow-default);
+      align-items: flex-start;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .step-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .step-content p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: 12px;
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 15px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      list-style: none;
+      transition: background 0.15s;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '＋';
+      font-size: 18px;
+      color: var(--primary-light);
+      font-weight: 400;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] summary::after {
+      content: '－';
+    }
+
+    .faq-item summary:hover {
+      background: #f0f6f2;
+    }
+
+    .faq-item summary:focus-visible {
+      outline: 2px solid var(--primary-light);
+      outline-offset: -2px;
+    }
+
+    .faq-answer {
+      padding: 0 20px 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .comment-item {
+      background: var(--surface);
+      border-radius: 10px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .comment-avatar {
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .comment-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .comment-nick {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 3px;
+    }
+
+    .comment-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    .comment-time {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 4px;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .news-item {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow-default);
+      transition: box-shadow 0.2s;
+    }
+
+    .news-item:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+    }
+
+    .news-meta {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 4px;
+    }
+
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* 相关推荐标签 */
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .related-tag {
+      display: inline-block;
+      padding: 7px 16px;
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .related-tag:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* 热门榜单 */
+    .ranking-list {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .ranking-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .ranking-item:last-child {
+      border-bottom: none;
+    }
+
+    .ranking-item:hover {
+      background: #f0f6f2;
+    }
+
+    .rank-num {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: #eef4f0;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .ranking-item:nth-child(1) .rank-num {
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .ranking-item:nth-child(2) .rank-num {
+      background: var(--accent-light);
+      color: var(--primary-dark);
+    }
+
+    .ranking-item:nth-child(3) .rank-num {
+      background: #d4e6de;
+      color: var(--primary-dark);
+    }
+
+    .rank-name {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      min-width: 0;
+    }
+
+    .rank-score {
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* ===== 右侧辅助栏 ===== */
+    .aux-sidebar {
+      position: sticky;
+      top: 108px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .aux-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 18px;
+    }
+
+    .aux-card h3 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hot-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hot-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 0;
+      font-size: 13px;
+      color: var(--text-secondary);
+      transition: color 0.15s;
+    }
+
+    .hot-item:hover {
+      color: var(--primary);
+    }
+
+    .hot-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .hot-name {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .hot-num {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+    }
+
+    .update-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .stream-item {
+      font-size: 12px;
+      color: var(--text-secondary);
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--border);
+      line-height: 1.5;
+    }
+
+    .stream-item:last-child {
+      border-bottom: none;
+    }
+
+    .stream-date {
+      color: var(--text-tertiary);
+      font-size: 11px;
+      margin-right: 4px;
+    }
+
+    /* 投稿互动 */
+    .contribute-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: #fff;
+      border-radius: var(--radius-card);
+      padding: 22px 20px;
+      text-align: center;
+    }
+
+    .contribute-card h3 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .contribute-card p {
+      font-size: 12px;
+      color: #cfe3d9;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .contribute-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 9px 24px;
+      border-radius: var(--radius-btn);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contribute-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ===== 页脚 ===== */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #b8cec4;
+      padding: 48px 24px 28px;
+      margin-top: 20px;
+    }
+
+    .footer-inner {
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand .brand-text {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #9db5a9;
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: #9db5a9;
+      padding: 4px 0;
+      transition: color 0.15s;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+      color: #7a8f86;
+    }
+
+    .footer-bottom .copyright {
+      line-height: 1.6;
+    }
+
+    /* ===== 回到顶部 ===== */
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 32px;
+      z-index: 150;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(27, 77, 62, 0.3);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.25s, visibility 0.25s, transform 0.25s, background 0.2s;
+      font-size: 20px;
+    }
+
+    .back-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-top:hover {
+      background: var(--primary-dark);
+    }
+
+    .back-top:focus-visible {
+      outline: 3px solid var(--accent-light);
+      outline-offset: 2px;
+    }
+
+    /* ===== 移动端遮罩 ===== */
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 175;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .nav-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 1100px) {
+      .main-container {
+        grid-template-columns: 1fr 240px;
+      }
+
+      .channel-sidebar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .main-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .aux-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      }
+
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+      }
+
+      .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        flex: none;
+        max-width: 220px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .announcement-bar {
+        font-size: 11px;
+        padding: 6px 12px;
+        gap: 8px;
+      }
+
+      .announcement-items {
+        gap: 10px;
+      }
+
+      .site-header {
+        top: 30px;
+        padding: 0 12px;
+      }
+
+      .header-inner {
+        height: 52px;
+      }
+
+      .brand-text {
+        font-size: 17px;
+      }
+
+      .main-nav {
+        display: none;
+        position: fixed;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 12px;
+        gap: 2px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        z-index: 180;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .main-nav a {
+        padding: 10px 16px;
+        font-size: 15px;
+        border-radius: 8px;
+      }
+
+      .hamburger-btn {
+        display: flex;
+      }
+
+      .header-search {
+        display: none;
+      }
+
+      .hero {
+        padding: 40px 16px 36px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero-desc {
+        font-size: 14px;
+      }
+
+      .main-container {
+        padding: 24px 12px 40px;
+      }
+
+      .content-section {
+        margin-bottom: 32px;
+      }
+
+      .section-header h2 {
+        font-size: 18px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .deep-dive {
+        padding: 20px 16px;
+      }
+
+      .aux-sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .back-top {
+        right: 14px;
+        bottom: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+      }
+
+      .update-item {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .update-date {
+        min-width: auto;
+      }
+
+      .comment-item {
+        padding: 12px 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* 搜索高亮 */
+    .search-highlight {
+      background: #fdf0d5;
+      border-radius: 2px;
+    }
+
+    .no-result-msg {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-tertiary);
+      background: var(--surface);
+      border-radius: var(--radius-card);
+    }
+
+    .no-result-msg.show {
+      display: block;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== 吸顶公告条 ===== -->
+<div class="announcement-bar" id="announcementBar">
+  <span class="announcement-brand">好吊操</span>
+  <div class="announcement-items">
+    <span class="announcement-item"><span class="date">11月7日</span><span class="item-name">吊环十字支撑慢翻上分解教学</span><span class="count">新</span></span>
+    <span class="announcement-item"><span class="date">11月8日</span><span class="item-name">全国吊操锦标赛资格赛成绩公示</span><span class="count">热</span></span>
+    <span class="announcement-item"><span class="count">12</span><span class="item-name">条新增动作条目</span></span>
+  </div>
+</div>
+
+<!-- ===== 吸顶页头 ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="brand-area">
+      <svg class="brand-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" stroke="#1b4d3e" stroke-width="2.5"/>
+        <path d="M12 14 C12 14, 20 6, 28 14" stroke="#e6a13c" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <path d="M12 26 C12 26, 20 34, 28 26" stroke="#e6a13c" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        <circle cx="20" cy="20" r="4.5" fill="#1b4d3e"/>
+      </svg>
+      <span class="brand-text">好吊操</span>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="主题导航">
+      <a href="/#overview">动作概览</a>
+      <a href="/#featured">精选条目</a>
+      <a href="/#updates">最新更新</a>
+      <a href="/#categories">分类索引</a>
+      <a href="/#deep-dive">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">社区评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#ranking">热门榜单</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="搜索动作或条目…" aria-label="搜索动作或条目">
+        <button type="button" id="searchBtn" aria-label="搜索">🔍</button>
+      </div>
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="打开导航菜单" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- ===== 首屏 ===== -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="hero-tag">竞技体操 · 吊环专项</span>
+      <h1>好吊操</h1>
+      <p class="hero-desc">
+        汇聚吊环悬垂、十字支撑、慢翻上、水平十字等竞技吊操动作的技术条目与训练体系，收录全国锦标赛赛程、动作难度分值与裁判扣分细则，面向体操练习者与力量训练爱好者。
+      </p>
+      <div class="hero-actions">
+        <a href="/#featured" class="btn-primary">浏览动作条目 →</a>
+        <a href="/#deep-dive" class="btn-outline">查看技术解析</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="140" cy="140" r="130" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+        <circle cx="140" cy="140" r="100" stroke="rgba(230,161,60,0.22)" stroke-width="1.2"/>
+        <circle cx="140" cy="140" r="70" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <!-- 吊环图形 -->
+        <ellipse cx="100" cy="100" rx="28" ry="10" stroke="#e6a13c" stroke-width="3" fill="none" transform="rotate(-20 100 100)"/>
+        <ellipse cx="180" cy="100" rx="28" ry="10" stroke="#e6a13c" stroke-width="3" fill="none" transform="rotate(20 180 100)"/>
+        <path d="M100 110 L100 160 C100 180, 120 195, 140 195 C160 195, 180 180, 180 160 L180 110" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.9"/>
+        <circle cx="140" cy="195" r="8" fill="#e6a13c"/>
+        <path d="M80 140 C60 140, 50 160, 50 180" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M200 140 C220 140, 230 160, 230 180" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 主布局 ===== -->
+<div class="main-container">
+
+  <!-- 左频道索引 -->
+  <aside class="channel-sidebar" aria-label="频道索引">
+    <nav class="channel-nav">
+      <div class="channel-nav-title">频道索引</div>
+      <a href="/#overview" class="active">动作概览</a>
+      <a href="/#featured">精选条目 <span class="badge">8</span></a>
+      <a href="/#updates">最新更新 <span class="badge">10</span></a>
+      <a href="/#categories">分类索引</a>
+      <a href="/#deep-dive">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#comments">社区评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#ranking">热门榜单</a>
+    </nav>
+  </aside>
+
+  <!-- 中主内容 -->
+  <main class="main-content">
+
+    <!-- 1. 主题领域概览 -->
+    <section class="content-section" id="overview">
+      <div class="section-header">
+        <h2>吊环竞技动作全景</h2>
+        <span class="section-sub">悬垂类 · 支撑类 · 摆动类 · 下法类</span>
+      </div>
+      <div class="overview-text">
+        <p>
+          吊环项目在男子竞技体操六个单项中，对肩带稳定肌群和核心抗伸展能力的要求最高。国际体联 2025-2028 周期规则把静止力量动作的保持时间从 2 秒调整为 2 秒停顿加 1 秒稳定过渡，裁判组对十字支撑、水平十字、倒十字三类动作的肩肘夹角检查细化为三个机位同步回放。国内层面，全国吊操锦标赛在 2026 赛季把资格赛动作难度上限从 6.0 分提升到 6.5 分，允许运动员在自选动作中编入两个 F 组以上力量静止。
+        </p>
+        <p>
+          从动作分类看，悬垂类包括直臂悬垂、屈臂悬垂和 L 形悬垂，主要考察握力耐力与肩胛下沉控制；支撑类覆盖十字支撑、水平十字、倒十字和背水平，判分核心是肩肘连线是否在同一水平面、髋关节有无折叠；摆动类以慢翻上、后摆上、前摆上为代表，看摆动节奏与制动时机；下法类常见直体后空翻两周转体 360°、团身后空翻两周下，落地稳定分占该动作总分的 30%。训练侧，省队普遍把悬垂举腿、弹力带十字支撑和吊环支撑摆浪拆成三个独立单元，每周各练两到三次，单次悬垂累积时间控制在 4 到 6 分钟。
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. 精选内容推荐 -->
+    <section class="content-section" id="featured">
+      <div class="section-header">
+        <h2>精选动作条目</h2>
+        <span class="section-sub">按难度与教学价值筛选</span>
+      </div>
+      <div class="card-grid" id="featuredGrid">
+        <article class="content-card">
+          <div class="card-img-wrap">
+            <img src="https://picsum.photos/seed/diaohuan-cross1/400/300" width="400" height="300" alt="吊环十字支撑动作侧面示范" loading="lazy">
+            <span class="card-type-badge">静止力量</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">吊环十字支撑（Iron Cross）</h3>
+            <p class="card-desc">双臂侧平举与肩同高，肩肘保持 180° 伸直，环带外展角度不超过 15°。裁判组重点看肩胛骨是否上提代偿，2026 版规则新增肘关节过伸扣分项。</p>
+            <div class="card-meta">
+              <div class="tag-list"><span class="tag">D 组难度</span><span class="tag">肩带稳定</span><span class="tag">静止 2 秒</span></div>
+              <span class="card-stat">难度 4.2</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card">
+          <div class="card-img-wrap">
+            <img src="https://picsum.photos/seed/diaohuan-slowup/400/300" width="400" height="300" alt="吊环慢翻上动作分解瞬间" loading="lazy">
+            <span class="card-type-badge">摆动类</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">慢翻上成支撑</h3>
+            <p class="card-desc">从直臂悬垂开始，靠收腹举腿和肩部后倒完成翻上，全过程要求两环间距不变。国内青年组比赛中该动作常作为连接串的起点。</p>
+            <div class="card-meta">
+              <div class="tag-list"><span class="tag">B 组难度</span><span class="tag">连接串</span><span class="tag">肩部后倒</span></div>
+              <span class="card-stat">难度 2.8</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card">
+          <div class="card-img-wrap">
+            <img src="https://picsum.photos/seed/diaohuan-horizontal/400/300" width="400" height="300" alt="吊环水平十字正面姿态" loading="lazy">
+            <span class="card-type-badge">静止力量</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">水平十字</h3>
+            <p class="card-desc">身体水平、环带与地面平行，髋关节不得高于肩线。2026 年全国锦标赛资格赛中仅 6 名选手完成该动作且无扣分。</p>
+            <div class="card-meta">
+              <div class="tag-list"><span class="tag">E 组难度</span><span class="tag">髋肩同高</span><span class="tag">核心抗伸展</span></div>
+              <span class="card-stat">难度 4.8</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card">
+          <div class="card-img-wrap">
+            <img src="https://picsum.photos/seed/diaohuan-inverted/400/300" width="400" height="300" alt="吊环倒十字倒立姿态" loading="lazy">
+            <span class="card-type-badge">静止力量</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">倒十字</h3>
+            <p class="card-desc">头朝下、身体与地面垂直，两臂侧展。肩袖肌群和肱二头肌长头承受极大拉力，省队建议先能在倒立架上稳定 30 秒再上环。</p>
+            <div class="card-meta">
+              <div class="tag-list"><span class="tag">E 组难度</span><span class="tag">肩袖负荷</span><span class="tag">倒立基础</span></div>
+              <span class="card-stat">难度 4.7</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card">
+          <div class="card-img-wrap">
+            <img src="https://picsum.photos/seed/diaohuan-swing/400/300" width="400" height="300" alt="吊环后摆上动作弧线" loading="lazy">
+            <span class="card-type-badge">摆动类</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">后摆上成支撑</h3>
+            <p class="card-desc">利用身体后摆的惯性将髋部甩至环上方，制动时机决定动作质量。摆幅不足时容易变成屈臂拉上，裁判组会降组判罚。</p>
+            <div class="card-meta">
+              <div class="tag-list"><span class="tag">C 组难度</span><span class="tag">摆动节奏</span><span class="tag">制动时机</span></div>
+              <span class="card-stat">难度 3.4</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card">
+          <div class="card-img-wrap">
+            <img src="https://picsum.photos/seed/diaohuan-dismount/400/300" width="400" height="300" alt="吊环直体后空翻下法落地" loading="lazy">
+            <span class="card-type-badge">下法</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">直体后空翻两周转体 360° 下</h3>
+            <p class="card-desc">2026 赛季全国锦标赛男子吊环决赛中，三位选手选用该下法，落地稳定分平均 0.25 分（满分 0.3）。转体周数不足会被判缺周。</p>
+            <div class="card-meta">
+              <div class="tag-list"><span class="tag">F 组下法</span><span class="tag">落地稳定</span><span class="tag">转体 360°</span></div>
+              <span class="card-stat">难度 5.2</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card">
+          <div class="card-img-wrap">
+            <img src="https://picsum.photos/seed/diaohuan-backlever/400/300" width="400" height="300" alt="吊环背水平支撑姿态" loading="lazy">
+            <span class="card-type-badge">静止力量</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">背水平支撑</h3>
+            <p class="card-desc">身体面朝上、背部与地面平行，肩胛骨后缩下沉。与水平十字的区分在于手臂方向，背水平对三角肌后束要求更高。</p>
+            <div class="card-meta">
+              <div class="tag-list"><span class="tag">D 组难度</span><span class="tag">三角肌后束</span><span class="tag">肩胛后缩</span></div>
+              <span class="card-stat">难度 4.0</span>
+            </div>
+          </div>
+        </article>
+        <article class="content-card">
+          <div class="card-img-wrap">
+            <img src="https://picsum.photos/seed/diaohuan-lhold/400/300" width="400" height="300" alt="吊环 L 形悬垂角度" loading="lazy">
+            <span class="card-type-badge">悬垂类</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">L 形悬垂</h3>
+            <p class="card-desc">双腿并拢前举至与地面平行、膝盖伸直，躯干与大腿夹角保持 90°。青少年组体能测试常以此为达标项，30 秒为及格线。</p>
+            <div class="card-meta">
+              <div class="tag-list"><span class="tag">A 组难度</span><span class="tag">屈髋肌群</span><span class="tag">30 秒达标</span></div>
+              <span class="card-stat">难度 1.6</span>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="no-result-msg" id="noResultMsg">没有找到匹配的条目，试试「十字支撑」「慢翻上」或「下法」。</div>
+    </section>
+
+    <!-- 3. 最新更新 -->
+    <section class="content-section" id="updates">
+      <div class="section-header">
+        <h2>最新更新与动态</h2>
+        <span class="section-sub">2026 年 11 月 1 日 — 11 月 8 日</span>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="update-date">11月8日</span>
+          <div class="update-content">
+            <div class="update-name">全国吊操锦标赛资格赛成绩公示</div>
+            <div class="update-summary">男子吊环资格赛共 42 人参赛，18 人晋级决赛，江苏队周楷以 15.266 分暂列第一，其十字支撑组获裁判组 9.0 完成分。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月7日</span>
+          <div class="update-content">
+            <div class="update-name">吊环十字支撑慢翻上分解教学</div>
+            <div class="update-summary">省队教练李振华发布 12 分钟教学，把慢翻上拆成悬垂举腿、肩部后倒、翻腕支撑三个节点，附弹力带辅助方案。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月6日</span>
+          <div class="update-content">
+            <div class="update-name">水平十字肩肘角度判罚细则更新</div>
+            <div class="update-summary">裁判组补充说明：肩肘连线偏离水平面超过 10° 扣 0.3 分，髋关节高于肩线直接降为 C 组难度。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月5日</span>
+          <div class="update-content">
+            <div class="update-name">青年组吊环下法难度上限调整</div>
+            <div class="update-summary">2027 赛季青年组下法封顶难度从 E 组降至 D 组，直体后空翻两周转体 360° 下将无法在青年组计分。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月4日</span>
+          <div class="update-content">
+            <div class="update-name">倒十字静态保持训练方案（三阶段）</div>
+            <div class="update-summary">方案分倒立架支撑、弹力带减重倒十字、完整倒十字三阶段，每阶段建议 4 周、每周 3 次，单次 5 组每组 8 秒。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月3日</span>
+          <div class="update-content">
+            <div class="update-name">吊环环带宽度与摆动半径关系测试</div>
+            <div class="update-summary">测试 45cm 与 50cm 两种环距下后摆上的摆幅差异，50cm 环距下髋部过环高度平均多 6cm，但肩关节活动度要求更高。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月2日</span>
+          <div class="update-content">
+            <div class="update-name">2026 全国吊操锦标赛决赛出场顺序公布</div>
+            <div class="update-summary">决赛 11 月 15 日举行，按资格赛成绩倒序出场，周楷末位出场，广东队陈树辉与浙江队吴一凡分列二三位。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月1日</span>
+          <div class="update-content">
+            <div class="update-name">L 形悬垂青少年达标线修订</div>
+            <div class="update-summary">13-15 岁组 30 秒及格线不变，16-18 岁组提升至 40 秒，测试时双腿夹角需保持在 90°±5°。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月30日</span>
+          <div class="update-content">
+            <div class="update-name">吊环专项力量周计划模板发布</div>
+            <div class="update-summary">模板按周一悬垂耐力、周三十字支撑、周五摆动连接分配负荷，含 RPE 自评栏与肩袖预防练习清单。</div>
+          </div>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月28日</span>
+          <div class="update-content">
+            <div class="update-name">背水平支撑常见代偿动作纠正</div>
+            <div class="update-summary">视频逐帧对比正确与代偿姿态，指出耸肩、屈肘、塌腰三种典型代偿及对应的弹力带矫正练习。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="content-section" id="categories">
+      <div class="section-header">
+        <h2>动作分类索引</h2>
+        <span class="section-sub">点击定位到对应条目</span>
+      </div>
+      <div class="category-grid">
+        <a href="/#featured" class="category-item">
+          <span class="category-name">十字支撑</span>
+          <span class="category-count">4 个条目 · D/E 组</span>
+        </a>
+        <a href="/#featured" class="category-item">
+          <span class="category-name">慢翻上</span>
+          <span class="category-count">3 个条目 · B 组</span>
+        </a>
+        <a href="/#featured" class="category-item">
+          <span class="category-name">水平十字</span>
+          <span class="category-count">2 个条目 · E 组</span>
+        </a>
+        <a href="/#featured" class="category-item">
+          <span class="category-name">倒十字</span>
+          <span class="category-count">2 个条目 · E 组</span>
+        </a>
+        <a href="/#featured" class="category-item">
+          <span class="category-name">后摆上</span>
+          <span class="category-count">3 个条目 · C 组</span>
+        </a>
+        <a href="/#featured" class="category-item">
+          <span class="category-name">直体后空翻下</span>
+          <span class="category-count">2 个条目 · F 组</span>
+        </a>
+        <a href="/#featured" class="category-item">
+          <span class="category-name">背水平支撑</span>
+          <span class="category-count">2 个条目 · D 组</span>
+        </a>
+        <a href="/#featured" class="category-item">
+          <span class="category-name">L 形悬垂</span>
+          <span class="category-count">3 个条目 · A 组</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section class="content-section" id="deep-dive">
+      <div class="section-header">
+        <h2>吊环动作技术判断拆解</h2>
+        <span class="section-sub">规则差异 · 扣分依据 · 训练负荷</span>
+      </div>
+      <div class="deep-dive">
+        <h3>静止力量动作的判分差异：十字支撑与水平十字</h3>
+        <p>
+          十字支撑和水平十字经常被混为一谈，两者在规则里是不同组别、不同扣分逻辑的动作。十字支撑要求双臂侧平举与肩同高，环带大致垂直向下，身体呈直立位；水平十字要求身体整体转到水平面，髋关节不得高于肩线。2026 版男子竞技体操评分规则把十字支撑的肩肘夹角检查细化到 165°-180° 区间，低于 165° 按屈臂扣 0.5 分；水平十字则增加髋关节角度一项，髋高于肩线直接降为 C 组，难度分从 4.8 降到 3.2。
+        </p>
+        <div class="data-note">
+          可核对数据：全国锦标赛资格赛 42 名选手中，十字支撑完成人数 27 人，平均完成分 8.6；水平十字完成人数仅 6 人，平均完成分 8.9。两者完成人数相差 4.5 倍，说明水平十字的普及门槛明显更高。
+        </div>
+        <p>
+          裁判组在 11 月 6 日补充的判罚细则里写明，水平十字的肩肘连线偏离水平面超过 10° 扣 0.3 分，且这一扣分与髋关节角度扣分不互斥。换句话说，一个选手可能同时因肩肘偏斜和髋部塌陷被扣 0.6 分以上。省队教练李振华在 11 月 7 日的教学视频里提到，训练水平十字时应该先把身体固定在水平面、再逐步减小弹力带辅助，而不是从十字支撑直接加难度。
+        </p>
+
+        <h3>慢翻上的制动时机：摆幅与肩部后倒的配合</h3>
+        <p>
+          慢翻上在 B 组动作里属于连接价值较高的一个，但它的容错空间比看起来小。动作核心是身体前摆到接近水平位时，收腹举腿同时肩部后倒，让髋部翻到环上方。这里有一个具体的时间窗口：从摆到最高点到肩部后倒完成，大约 0.4 到 0.6 秒。超过 0.6 秒，身体开始回落，动作会变成屈臂拉上，按规则降组处理；短于 0.4 秒，肩部后倒不充分，翻上后支撑不稳，容易掉环。
+        </p>
+        <ul>
+          <li>摆幅检查：后摆时髋部过环高度应在 15cm 以上，低于 10cm 建议先练悬垂举腿。</li>
+          <li>肩部后倒角度：启动翻上时肩关节后倒约 45°，与躯干形成明显折角。</li>
+          <li>环距影响：50cm 环距下摆幅比 45cm 平均多 6cm，但肩关节活动度要求更高。</li>
+        </ul>
+        <p>
+          11 月 3 日的环距测试记录还显示，环距从 45cm 增加到 50cm 后，后摆上的成功次数从 20 次里 12 次降到 9 次。这个数字与"环距越宽越好发力"的直觉相反，原因是宽环距对肩关节内旋活动度要求更高，活动度不足的练习者反而容易卡在翻上中途。
+        </p>
+
+        <h3>下法落地稳定分的构成</h3>
+        <p>
+          直体后空翻两周转体 360° 下在 2026 赛季全国锦标赛男子吊环决赛中被三位选手选用。落地稳定分满分 0.3 分，实际得分取决于落地缓冲步、身体晃动幅度和转体周数完成度。资格赛三位选手的稳定分分别是 0.25、0.20、0.15，差距主要来自落地后第一步的大小：0.25 分的那位选手落地后双脚未移动，另外两位分别移动了 15cm 和 30cm。
+        </p>
+        <p>
+          规则里还有一条容易被忽略：转体周数不足 90° 以上按缺周处理，直接扣 0.5 分，远大于落地稳定分的波动。这意味着选手在转体节奏和落地稳定之间做取舍时，保住转体周数优先。11 月 5 日青年组下法难度封顶调整后，青年选手无法再选这个动作，教练组把训练重点转向团身后空翻两周下，后者的落地稳定分波动更小。
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. 体验指南 -->
+    <section class="content-section" id="guide">
+      <div class="section-header">
+        <h2>吊操动作学习路径</h2>
+        <span class="section-sub">从悬垂到静止力量</span>
+      </div>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>先建立悬垂基础</h4>
+            <p>直臂悬垂能稳定保持 60 秒、L 形悬垂 30 秒达标，再进入摆动类动作。悬垂举腿每周 3 次、每次 4 组 12 次，作为屈髋和握力的基础。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>摆动类动作先练节奏</h4>
+            <p>慢翻上和后摆上依赖摆幅与制动时机，先不挂难度，用低环练摆幅控制。判断标准：后摆时髋部过环高度至少 15cm，再尝试翻上。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>静止力量从十字支撑起步</h4>
+            <p>弹力带辅助十字支撑每次 5 组、每组 8 秒，肩肘夹角保持 165° 以上。水平十字和倒十字在十字支撑能无辅助保持 15 秒后再尝试。</p>
+          </div>
+        </div>
+        <div class="guide-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>下法单独练，不混在成套里</h4>
+            <p>下法落地稳定分占比高，建议每周单独练 2 次落地缓冲。转体周数完成度优先于落地稳定，先保住周数再抠步法。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="content-section" id="faq">
+      <div class="section-header">
+        <h2>吊环动作常见问答</h2>
+        <span class="section-sub">规则 · 训练 · 判罚</span>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>十字支撑和水平十字在判分上最大的区别是什么？</summary>
+          <div class="faq-answer">
+            十字支撑是身体直立位、双臂侧平举，判分核心是肩肘夹角和环带外展角度；水平十字要求身体整体水平，额外增加髋关节角度检查，髋高于肩线直接降组。两者组别不同，十字支撑 D 组、水平十字 E 组。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>慢翻上总是变成屈臂拉上，问题出在哪？</summary>
+          <div class="faq-answer">
+            多数情况是肩部后倒启动太晚。摆到最高点后 0.4 到 0.6 秒内必须完成肩部后倒，超过 0.6 秒身体回落，手臂被迫发力。其次检查后摆时髋部过环高度是否达到 15cm，摆幅不够也会导致翻不上去。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>倒十字一般要练多久才能上环？</summary>
+          <div class="faq-answer">
+            省队经验是先能在倒立架上稳定支撑 30 秒，再进入弹力带减重倒十字阶段，该阶段通常 4 周、每周 3 次。完整倒十字上环没有固定时间表，2026 年资格赛 42 人中只有 9 人完成倒十字且无扣分，说明这个动作的普及率不高。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>后摆上的环距怎么选，45cm 还是 50cm？</summary>
+          <div class="faq-answer">
+            50cm 环距下髋部过环高度平均多 6cm，但要求更高的肩关节内旋活动度。11 月 3 日的测试里，同一批练习者 45cm 环距下后摆上 20 次成功 12 次，50cm 下成功 9 次。肩关节活动度不足的练习者选 45cm 更稳。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>直体后空翻两周转体 360° 下的落地稳定分怎么算？</summary>
+          <div class="faq-answer">
+            稳定分满分 0.3 分，看落地缓冲步大小和身体晃动幅度。2026 年资格赛三位完成该动作的选手稳定分分别是 0.25、0.20、0.15，差距来自落地后第一步的移动距离，分别是 0cm、15cm、30cm。转体周数不足另扣 0.5 分，优先级高于落地稳定。
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>L 形悬垂青少年组达标线有变化吗？</summary>
+          <div class="faq-answer">
+            有。11 月 1 日修订后，13-15 岁组维持 30 秒及格线，16-18 岁组提升至 40 秒。测试时双腿与地面平行、膝盖伸直，躯干与大腿夹角保持在 90°±5°，夹角超差该次测试不计入。
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="content-section" id="comments">
+      <div class="section-header">
+        <h2>社区讨论</h2>
+        <span class="section-sub">来自练习者与观众的随手记录</span>
+      </div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-avatar">陈</div>
+          <div class="comment-body">
+            <div class="comment-nick">陈树辉的肩袖</div>
+            <div class="comment-text">水平十字那个髋高于肩线直接降组太狠了，练了半年还是卡在髋部塌陷，教练说核心抗伸展不够，得回去补悬垂举腿。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">周</div>
+          <div class="comment-body">
+            <div class="comment-nick">周楷今天稳了吗</div>
+            <div class="comment-text">资格赛 15.266 分，十字支撑组完成分 9.0，这个完成分在资格赛里算高的了，决赛末位出场压力不小。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">李</div>
+          <div class="comment-body">
+            <div class="comment-nick">李振华教学笔记</div>
+            <div class="comment-text">慢翻上拆成三个节点练确实有用，之前一上来就整动作，十次里八次变成屈臂拉上，现在单独练肩部后倒反而顺了。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">阿</div>
+          <div class="comment-body">
+            <div class="comment-nick">阿力不练吊环</div>
+            <div class="comment-text">路过看了一眼，那个倒十字的图看着就疼，肩袖受得了吗。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">吴</div>
+          <div class="comment-body">
+            <div class="comment-nick">吴一凡的转体</div>
+            <div class="comment-text">下法稳定分那部分讲得对，转体周数缺 90° 扣 0.5，落地多走一步才扣 0.05 到 0.1，账算下来肯定是先保周数。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">小</div>
+          <div class="comment-body">
+            <div class="comment-nick">小环上的灰</div>
+            <div class="comment-text">45cm 和 50cm 环距的测试数据有点意思，跟我们馆里的体感相反，馆里都爱拉宽环距，看来得按肩活动度来选。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">体</div>
+          <div class="comment-body">
+            <div class="comment-nick">体操房第三排</div>
+            <div class="comment-text">L 形悬垂 16-18 岁组提到 40 秒，队里好几个孩子卡在 35 秒，估计要开始加悬垂举腿的组数了。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">路</div>
+          <div class="comment-body">
+            <div class="comment-nick">路人甲看决赛</div>
+            <div class="comment-text">11 月 15 日决赛，末位出场那位能不能顶住，资格赛第一决赛掉链子的事以前也发生过。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">刘</div>
+          <div class="comment-body">
+            <div class="comment-nick">刘教练的秒表</div>
+            <div class="comment-text">十字支撑肩肘夹角 165° 以下扣 0.5 分，这个检查现在三个机位回放，想蒙混基本不可能，训练时还是老实把臂伸直。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">深</div>
+          <div class="comment-body">
+            <div class="comment-nick">深夜翻规则</div>
+            <div class="comment-text">2027 青年组下法封顶到 D 组，那批练直体后空翻两周下的孩子等于白练，规则改得挺突然的。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">阿</div>
+          <div class="comment-body">
+            <div class="comment-nick">阿哲练背水平</div>
+            <div class="comment-text">背水平和水平十字区分那段看明白了，之前一直以为是一个动作的两个名字，难怪教练说我方向搞错了。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">吃</div>
+          <div class="comment-body">
+            <div class="comment-nick">吃瓜选手</div>
+            <div class="comment-text">看不懂难度分怎么算的，就只知道落地站稳了好看。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">赵</div>
+          <div class="comment-body">
+            <div class="comment-nick">赵老师看吊环</div>
+            <div class="comment-text">倒十字只有 9 人完成且无扣分，这个数字比我预期的低，说明省队层面的倒十字训练体系还是没铺开。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">青</div>
+          <div class="comment-body">
+            <div class="comment-nick">青年组陪练</div>
+            <div class="comment-text">下法难度封顶调整通知下来那天，队里两个练转体 360 的孩子直接懵了，转团身两周下还得重新适应落地节奏。</div>
+          </div>
+        </div>
+        <div class="comment-item">
+          <div class="comment-avatar">一</div>
+          <div class="comment-body">
+            <div class="comment-nick">一只吊环</div>
+            <div class="comment-text">弹力带减重练倒十字确实有用，但弹力带的位置很讲究，挂太高助力不够，挂太低又变成自己撑，试了好几次才找到合适的点。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="content-section" id="news">
+      <div class="section-header">
+        <h2>近期吊环赛事资讯</h2>
+        <span class="section-sub">资格赛 · 规则调整 · 训练动态</span>
+      </div>
+      <div class="news-list">
+        <article class="news-item">
+          <div class="news-title">全国吊操锦标赛资格赛收官，周楷 15.266 分领跑</div>
+          <div class="news-meta">2026 年 11 月 8 日</div>
+          <div class="news-summary">42 名选手参赛，18 人晋级 11 月 15 日的决赛。周楷十字支撑组完成分 9.0，广东陈树辉以 15.033 分列第二，浙江吴一凡 14.900 分第三。</div>
+        </article>
+        <article class="news-item">
+          <div class="news-title">水平十字判罚细则补充，肩肘偏斜 10° 扣 0.3 分</div>
+          <div class="news-meta">2026 年 11 月 6 日</div>
+          <div class="news-summary">裁判组明确该扣分与髋关节角度扣分不互斥，同一动作可能被叠加扣分。资格赛 6 名完成水平十字的选手中，2 人因肩肘偏斜被扣分。</div>
+        </article>
+        <article class="news-item">
+          <div class="news-title">青年组下法难度 2027 赛季封顶 D 组</div>
+          <div class="news-meta">2026 年 11 月 5 日</div>
+          <div class="news-summary">直体后空翻两周转体 360° 下将无法在青年组计分，教练组转向团身后空翻两周下。调整通知发布后，多个省队已启动下法改练计划。</div>
+        </article>
+        <article class="news-item">
+          <div class="news-title">吊环环距与后摆上成功率测试数据公布</div>
+          <div class="news-meta">2026 年 11 月 3 日</div>
+          <div class="news-summary">45cm 环距下 20 次后摆上成功 12 次，50cm 下成功 9 次。测试者肩关节内旋活动度均值为 62°，低于 60° 的练习者在宽环距下成功率明显下降。</div>
+        </article>
+        <article class="news-item">
+          <div class="news-title">L 形悬垂 16-18 岁组达标线提至 40 秒</div>
+          <div class="news-meta">2026 年 11 月 1 日</div>
+          <div class="news-summary">13-15 岁组维持 30 秒。测试要求双腿与地面平行、膝盖伸直，躯干与大腿夹角 90°±5°，夹角超差该次不计入成绩。</div>
+        </article>
+        <article class="news-item">
+          <div class="news-title">倒十字静态保持三阶段训练方案发布</div>
+          <div class="news-meta">2026 年 10 月 30 日</div>
+          <div class="news-summary">方案分倒立架支撑、弹力带减重、完整倒十字三阶段，每阶段 4 周、每周 3 次。省队教练建议把肩袖预防练习纳入每个训练日。</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="content-section" id="related">
+      <div class="section-header">
+        <h2>相关方向与条目</h2>
+        <span class="section-sub">具体动作与技术点</span>
+      </div>
+      <div class="related-tags">
+        <a href="/#featured" class="related-tag">十字支撑肩肘夹角</a>
+        <a href="/#featured" class="related-tag">慢翻上制动时机</a>
+        <a href="/#featured" class="related-tag">水平十字髋关节角度</a>
+        <a href="/#featured" class="related-tag">倒十字弹力带减重</a>
+        <a href="/#featured" class="related-tag">后摆上环距选择</a>
+        <a href="/#featured" class="related-tag">直体后空翻下落地稳定</a>
+        <a href="/#featured" class="related-tag">背水平肩胛后缩</a>
+        <a href="/#featured" class="related-tag">L 形悬垂 40 秒达标</a>
+      </div>
+    </section>
+
+    <!-- 11. 热门榜单 -->
+    <section class="content-section" id="ranking">
+      <div class="section-header">
+        <h2>动作关注度榜单</h2>
+        <span class="section-sub">按社区浏览与收藏综合排序</span>
+      </div>
+      <div class="ranking-list">
+        <div class="ranking-item">
+          <span class="rank-num">1</span>
+          <span class="rank-name">吊环十字支撑（Iron Cross）</span>
+          <span class="rank-score">9.6</span>
+        </div>
+        <div class="ranking-item">
+          <span class="rank-num">2</span>
+          <span class="rank-name">慢翻上成支撑</span>
+          <span class="rank-score">9.3</span>
+        </div>
+        <div class="ranking-item">
+          <span class="rank-num">3</span>
+          <span class="rank-name">水平十字</span>
+          <span class="rank-score">9.1</span>
+        </div>
+        <div class="ranking-item">
+          <span class="rank-num">4</span>
+          <span class="rank-name">倒十字</span>
+          <span class="rank-score">8.8</span>
+        </div>
+        <div class="ranking-item">
+          <span class="rank-num">5</span>
+          <span class="rank-name">直体后空翻两周转体 360° 下</span>
+          <span class="rank-score">8.5</span>
+        </div>
+        <div class="ranking-item">
+          <span class="rank-num">6</span>
+          <span class="rank-name">后摆上成支撑</span>
+          <span class="rank-score">8.2</span>
+        </div>
+        <div class="ranking-item">
+          <span class="rank-num">7</span>
+          <span class="rank-name">背水平支撑</span>
+          <span class="rank-score">7.9</span>
+        </div>
+        <div class="ranking-item">
+          <span class="rank-num">8</span>
+          <span class="rank-name">L 形悬垂</span>
+          <span class="rank-score">7.6</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧辅助栏 -->
+  <aside class="aux-sidebar" aria-label="辅助信息">
+    <div class="aux-card">
+      <h3>本周热练动作</h3>
+      <div class="hot-list">
+        <a href="/#featured" class="hot-item"><span class="hot-dot"></span><span class="hot-name">十字支撑弹力带辅助</span><span class="hot-num">1.2k</span></a>
+        <a href="/#featured" class="hot-item"><span class="hot-dot"></span><span class="hot-name">慢翻上分解练习</span><span class="hot-num">986</span></a>
+        <a href="/#featured" class="hot-item"><span class="hot-dot"></span><span class="hot-name">倒十字三阶段</span><span class="hot-num">874</span></a>
+        <a href="/#featured" class="hot-item"><span class="hot-dot"></span><span class="hot-name">L 形悬垂 40 秒</span><span class="hot-num">731</span></a>
+        <a href="/#featured" class="hot-item"><span class="hot-dot"></span><span class="hot-name">后摆上环距测试</span><span class="hot-num">645</span></a>
+        <a href="/#featured" class="hot-item"><span class="hot-dot"></span><span class="hot-name">落地缓冲步法</span><span class="hot-num">512</span></a>
+      </div>
+    </div>
+    <div class="aux-card">
+      <h3>近期更新流</h3>
+      <div class="update-stream">
+        <div class="stream-item"><span class="stream-date">11-08</span>资格赛成绩公示，18 人晋级</div>
+        <div class="stream-item"><span class="stream-date">11-07</span>慢翻上分解教学上线</div>
+        <div class="stream-item"><span class="stream-date">11-06</span>水平十字判罚细则补充</div>
+        <div class="stream-item"><span class="stream-date">11-05</span>青年组下法难度封顶调整</div>
+        <div class="stream-item"><span class="stream-date">11-04</span>倒十字三阶段训练方案</div>
+        <div class="stream-item"><span class="stream-date">11-03</span>环距与摆幅测试数据</div>
+      </div>
+    </div>
+    <div class="contribute-card">
+      <h3>投稿你的训练记录</h3>
+      <p>分享吊环动作练习视频或比赛复盘，通过审核后进入社区展示。</p>
+      <a href="/#comments" class="contribute-btn">前往社区投稿</a>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ===== 页脚 ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-text">好吊操</span>
+        <p>记录 2024 至 2026 赛季吊环项目动作演变与赛事数据，覆盖悬垂、支撑、摆动、下法四类共 23 个动作条目，每周更新训练方案与判罚细则。</p>
+      </div>
+      <div class="footer-col">
+        <h4>动作分类</h4>
+        <a href="/#featured">十字支撑</a>
+        <a href="/#featured">水平十字</a>
+        <a href="/#featured">倒十字</a>
+        <a href="/#featured">慢翻上</a>
+        <a href="/#featured">后摆上</a>
+      </div>
+      <div class="footer-col">
+        <h4>赛事与规则</h4>
+        <a href="/#news">资格赛成绩</a>
+        <a href="/#news">判罚细则</a>
+        <a href="/#news">下法难度调整</a>
+        <a href="/#deep-dive">评分规则拆解</a>
+        <a href="/#ranking">关注度榜单</a>
+      </div>
+      <div class="footer-col">
+        <h4>互动与参与</h4>
+        <a href="/#comments">社区评论</a>
+        <a href="/#comments">投稿训练记录</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#guide">学习路径</a>
+        <a href="/#related">相关方向</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="copyright">
+        好吊操 · 竞技吊环动作聚合示例页面<br>
+        内容条目与数据为示例性质，用于展示动作分类与规则解读结构。最近更新：2026 年 11 月 8 日。
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function() {
+  'use strict';
+
+  var hamburgerBtn = document.getElementById('hamburgerBtn');
+  var mainNav = document.getElementById('mainNav');
+  var navOverlay = document.getElementById('navOverlay');
+  var backTop = document.getElementById('backTop');
+  var searchInput = document.getElementById('searchInput');
+  var searchBtn = document.getElementById('searchBtn');
+  var featuredGrid = document.getElementById('featuredGrid');
+  var noResultMsg = document.getElementById('noResultMsg');
+  var allCards = Array.prototype.slice.call(featuredGrid.querySelectorAll('.content-card'));
+
+  /* 汉堡菜单 */
+  function closeMenu() {
+    mainNav.classList.remove('open');
+    navOverlay.classList.remove('active');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    hamburgerBtn.setAttribute('aria-label', '打开导航菜单');
+  }
+
+  function openMenu() {
+    mainNav.classList.add('open');
+    navOverlay.classList.add('active');
+    hamburgerBtn.setAttribute('aria-expanded', 'true');
+    hamburgerBtn.setAttribute('aria-label', '关闭导航菜单');
+  }
+
+  hamburgerBtn.addEventListener('click', function() {
+    if (mainNav.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  navOverlay.addEventListener('click', closeMenu);
+
+  /* 点击导航链接后收起菜单（移动端） */
+  mainNav.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 740) {
+        closeMenu();
+      }
+    });
+  });
+
+  /* Esc 关闭菜单 */
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+      closeMenu();
+      hamburgerBtn.focus();
+    }
+  });
+
+  /* 回到顶部 */
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > window.innerHeight) {
+      backTop.classList.add('visible');
+    } else {
+      backTop.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  backTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* 搜索筛选 */
+  function doSearch() {
+    var query = searchInput.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    allCards.forEach(function(card) {
+      var text = card.textContent.toLowerCase();
+      if (query === '' || text.indexOf(query) !== -1) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (query !== '' && visibleCount === 0) {
+      noResultMsg.classList.add('show');
+    } else {
+      noResultMsg.classList.remove('show');
+    }
+  }
+
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('input', doSearch);
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      doSearch();
+    }
+  });
+
+  /* 侧栏频道高亮 */
+  var navLinks = document.querySelectorAll('.channel-nav a');
+  var sections = [];
+  navLinks.forEach(function(link) {
+    var href = link.getAttribute('href');
+    if (href && href.indexOf('/#') === 0) {
+      var id = href.replace('/#', '');
+      var el = document.getElementById(id);
+      if (el) {
+        sections.push({ link: link, el: el });
+      }
+    }
+  });
+
+  function highlightNav() {
+    var scrollPos = window.scrollY + 140;
+    var current = null;
+    sections.forEach(function(item) {
+      if (item.el.offsetTop <= scrollPos) {
+        current = item;
+      }
+    });
+    navLinks.forEach(function(link) { link.classList.remove('active'); });
+    if (current) {
+      current.link.classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', highlightNav, { passive: true });
+  window.addEventListener('load', highlightNav);
+
+})();
+</script>
+
+<!-- WebSite 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "好吊操",
+  "description": "聚焦竞技吊操动作解析、训练体系与赛事动态，收录吊环悬垂、十字支撑、慢翻上等技巧条目。",
+  "inLanguage": "zh-CN"
+}
+</script>
+
+<!-- FAQPage 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "十字支撑和水平十字在判分上最大的区别是什么？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "十字支撑是身体直立位、双臂侧平举，判分核心是肩肘夹角和环带外展角度；水平十字要求身体整体水平，额外增加髋关节角度检查，髋高于肩线直接降组。两者组别不同，十字支撑 D 组、水平十字 E 组。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "慢翻上总是变成屈臂拉上，问题出在哪？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多数情况是肩部后倒启动太晚。摆到最高点后 0.4 到 0.6 秒内必须完成肩部后倒，超过 0.6 秒身体回落，手臂被迫发力。其次检查后摆时髋部过环高度是否达到 15cm，摆幅不够也会导致翻不上去。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "倒十字一般要练多久才能上环？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "省队经验是先能在倒立架上稳定支撑 30 秒，再进入弹力带减重倒十字阶段，该阶段通常 4 周、每周 3 次。完整倒十字上环没有固定时间表，2026 年资格赛 42 人中只有 9 人完成倒十字且无扣分，说明这个动作的普及率不高。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "后摆上的环距怎么选，45cm 还是 50cm？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "50cm 环距下髋部过环高度平均多 6cm，但要求更高的肩关节内旋活动度。11 月 3 日的测试里，同一批练习者 45cm 环距下后摆上 20 次成功 12 次，50cm 下成功 9 次。肩关节活动度不足的练习者选 45cm 更稳。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "直体后空翻两周转体 360° 下的落地稳定分怎么算？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "稳定分满分 0.3 分，看落地缓冲步大小和身体晃动幅度。2026 年资格赛三位完成该动作的选手稳定分分别是 0.25、0.20、0.15，差距来自落地后第一步的移动距离，分别是 0cm、15cm、30cm。转体周数不足另扣 0.5 分，优先级高于落地稳定。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L 形悬垂青少年组达标线有变化吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有。11 月 1 日修订后，13-15 岁组维持 30 秒及格线，16-18 岁组提升至 40 秒。测试时双腿与地面平行、膝盖伸直，躯干与大腿夹角保持在 90°±5°，夹角超差该次测试不计入。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+  </html>
