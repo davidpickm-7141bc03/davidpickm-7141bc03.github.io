@@ -1,0 +1,2203 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnlyTease视频合集 - 模特档案与专辑索引</title>
+  <meta name="description" content="OnlyTease视频合集汇聚丝袜模特写真视频档案，包含经典单集、幕后花絮、模特作品年表与订阅观看指南，适合写真内容爱好者检索与比较。">
+  <meta name="keywords" content="OnlyTease视频合集">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a1a2e'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23e94560' stroke-width='2.5'/%3E%3Cpath d='M12 16h8M16 12v8' stroke='%23f5c518' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #1a1a2e;
+      --primary-light: #2d2d44;
+      --primary-dark: #0f0f1a;
+      --accent: #e94560;
+      --accent-soft: #fce4e8;
+      --gold: #f5c518;
+      --bg: #f7f5f2;
+      --panel: #ffffff;
+      --text: #1e1e2a;
+      --text-secondary: #5a5a6e;
+      --text-muted: #8e8e9a;
+      --divider: #e8e4df;
+      --radius-card: 14px;
+      --radius-btn: 8px;
+      --radius-tag: 4px;
+      --radius-banner: 18px;
+      --shadow-default: 0 2px 12px rgba(26,26,46,0.07);
+      --shadow-hover: 0 8px 28px rgba(26,26,46,0.13);
+      --font: -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', sans-serif;
+      --max-width: 1320px;
+      --sticky-offset: 96px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; object-fit: cover; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ===== 吸顶公告条 ===== */
+    .announce-bar {
+      background: var(--primary-dark);
+      color: #d8d8e0;
+      font-size: 13px;
+      padding: 7px 20px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+    }
+    .announce-bar .brand-tag {
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
+    }
+    .announce-bar .announce-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+    .announce-bar .announce-date {
+      color: var(--accent);
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+    .announce-bar .announce-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ===== 吸顶页头 ===== */
+    .site-header {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--divider);
+      position: sticky;
+      top: 36px;
+      z-index: 1000;
+    }
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      height: 62px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 34px; height: 34px;
+    }
+    .logo-text {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+    .logo-text em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      flex: 1;
+      flex-wrap: wrap;
+    }
+    .main-nav a {
+      padding: 6px 13px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .main-nav a:hover, .main-nav a:focus-visible {
+      background: var(--accent-soft);
+      color: var(--accent);
+      outline: none;
+    }
+    .main-nav a:focus-visible {
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border: 1px solid var(--divider);
+      border-radius: 20px;
+      padding: 0 4px 0 14px;
+      height: 36px;
+      transition: border-color 0.2s;
+    }
+    .search-box:focus-within {
+      border-color: var(--accent);
+    }
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      width: 140px;
+      color: var(--text);
+    }
+    .search-box input::placeholder { color: var(--text-muted); }
+    .search-box button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 16px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .search-box button:hover { background: var(--accent); }
+    .hamburger {
+      display: none;
+      background: none;
+      border: 2px solid var(--divider);
+      border-radius: var(--radius-btn);
+      width: 38px; height: 38px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 18px; height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: 0.25s;
+    }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 45%, #2a1a2e 100%);
+      color: #eee;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: -60px; top: -60px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(233,69,96,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      left: 10%; bottom: -120px;
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,197,24,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 64px 28px 56px;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .hero-content h1 span {
+      background: linear-gradient(90deg, var(--gold), #ffdd77);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: #b8b8cc;
+      line-height: 1.75;
+      max-width: 560px;
+      margin-bottom: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 11px 28px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 700;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: #d13a52; transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      color: #eee;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      padding: 11px 28px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 600;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-visual svg {
+      width: 100%;
+      max-width: 340px;
+      filter: drop-shadow(0 12px 32px rgba(0,0,0,0.35));
+    }
+
+    /* ===== 主内容三栏 ===== */
+    .main-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 36px 28px 60px;
+      display: grid;
+      grid-template-columns: 178px 1fr 248px;
+      gap: 28px;
+      align-items: start;
+    }
+    .left-channel {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .left-channel .channel-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 0 10px 10px;
+    }
+    .left-channel a {
+      display: block;
+      padding: 8px 12px;
+      font-size: 13.5px;
+      border-radius: var(--radius-btn);
+      color: var(--text-secondary);
+      transition: background 0.18s, color 0.18s;
+      border-left: 3px solid transparent;
+    }
+    .left-channel a:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .left-channel a.active {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+      border-left-color: var(--accent);
+    }
+    .left-channel a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+
+    .center-main { min-width: 0; }
+
+    /* 板块通用 */
+    .section {
+      margin-bottom: 42px;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .section-header h2 {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: var(--primary);
+      position: relative;
+      padding-left: 14px;
+    }
+    .section-header h2::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 4px; bottom: 4px;
+      width: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .section-header .section-note {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* 概览文本 */
+    .overview-text {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 24px 26px;
+      box-shadow: var(--shadow-default);
+      font-size: 14.5px;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+    .overview-text p + p { margin-top: 12px; }
+    .overview-text strong { color: var(--primary); font-weight: 700; }
+
+    /* 精选卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 16px;
+    }
+    .content-card {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+      transition: box-shadow 0.22s, transform 0.22s;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+    .content-card .card-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: var(--primary-light);
+    }
+    .content-card .card-img img {
+      width: 100%; height: 100%;
+      transition: transform 0.35s;
+    }
+    .content-card:hover .card-img img { transform: scale(1.04); }
+    .card-body {
+      padding: 13px 15px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      flex: 1;
+    }
+    .card-body h3 {
+      font-size: 14.5px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--primary);
+    }
+    .card-tags {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: var(--radius-tag);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .tag.gold { background: #fef6dd; color: #8a6d00; }
+    .tag.dark { background: #e8e8f0; color: var(--text-secondary); }
+    .card-desc {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .card-meta .hot { color: var(--accent); font-weight: 600; }
+
+    /* 动态列表 */
+    .update-list {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+    .update-item {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--divider);
+      font-size: 13.5px;
+      transition: background 0.15s;
+    }
+    .update-item:last-child { border-bottom: none; }
+    .update-item:hover { background: #faf8f6; }
+    .update-item .update-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+      width: 70px;
+    }
+    .update-item .update-name {
+      font-weight: 600;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .update-item .update-summary {
+      color: var(--text-secondary);
+      font-size: 12.5px;
+      min-width: 0;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      background: var(--panel);
+      border: 1px solid var(--divider);
+      border-radius: var(--radius-btn);
+      padding: 12px 10px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: background 0.18s, border-color 0.18s, color 0.18s;
+    }
+    .category-item:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .category-item:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+    .category-item .cat-count {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 28px 30px;
+      box-shadow: var(--shadow-default);
+      font-size: 14.5px;
+      line-height: 1.85;
+      color: var(--text-secondary);
+    }
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 22px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .deep-dive h3:first-child { margin-top: 0; }
+    .deep-dive p { margin-bottom: 10px; }
+    .deep-dive ul {
+      margin: 8px 0 14px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .deep-dive li { font-size: 14px; }
+    .deep-dive strong { color: var(--primary); font-weight: 700; }
+    .deep-dive blockquote {
+      border-left: 3px solid var(--gold);
+      background: #fdfaf0;
+      padding: 10px 16px;
+      margin: 14px 0;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+    }
+
+    /* 指南步骤 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .step-item {
+      display: flex;
+      gap: 14px;
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-default);
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-content h3 {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .step-content p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-list details {
+      background: var(--panel);
+      border-radius: var(--radius-btn);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+    .faq-list summary {
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.15s;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '＋';
+      font-size: 16px;
+      color: var(--accent);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq-list details[open] summary::after {
+      content: '－';
+    }
+    .faq-list summary:hover { background: #faf8f6; }
+    .faq-list summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -2px;
+    }
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .comment-item {
+      background: var(--panel);
+      border-radius: var(--radius-btn);
+      padding: 13px 16px;
+      box-shadow: var(--shadow-default);
+    }
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+    .comment-avatar {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .comment-nick {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .comment-date {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+    .comment-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .news-item {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-default);
+      display: flex;
+      gap: 16px;
+      transition: box-shadow 0.2s;
+    }
+    .news-item:hover { box-shadow: var(--shadow-hover); }
+    .news-item .news-thumb {
+      width: 100px;
+      height: 72px;
+      flex-shrink: 0;
+      border-radius: var(--radius-btn);
+      overflow: hidden;
+      background: var(--primary-light);
+    }
+    .news-item .news-thumb img { width: 100%; height: 100%; }
+    .news-body { min-width: 0; }
+    .news-body h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+    .news-body .news-date {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .news-body p {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 相关推荐 */
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .related-tags a {
+      padding: 6px 14px;
+      border-radius: 20px;
+      background: var(--panel);
+      border: 1px solid var(--divider);
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      transition: background 0.18s, border-color 0.18s, color 0.18s;
+    }
+    .related-tags a:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .related-tags a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 1px;
+    }
+
+    /* 补充板块 - 时间线 */
+    .timeline {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 20px 22px;
+      box-shadow: var(--shadow-default);
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 30px; top: 24px; bottom: 24px;
+      width: 2px;
+      background: var(--divider);
+    }
+    .timeline-item {
+      display: flex;
+      gap: 18px;
+      padding: 10px 0;
+      position: relative;
+    }
+    .timeline-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      margin-top: 5px;
+      margin-left: 5px;
+      position: relative;
+      z-index: 1;
+      border: 2px solid var(--panel);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+    .timeline-content h3 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .timeline-content .tl-date {
+      font-size: 11.5px;
+      color: var(--text-muted);
+    }
+    .timeline-content p {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* 右侧辅助栏 */
+    .right-aside {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .aside-card {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-default);
+      padding: 18px 18px 16px;
+    }
+    .aside-card h3 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--divider);
+    }
+    .hot-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hot-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 6px 0;
+      font-size: 13px;
+      border-bottom: 1px solid #f5f2ee;
+    }
+    .hot-list li:last-child { border-bottom: none; }
+    .hot-list .rank {
+      font-weight: 800;
+      font-size: 12px;
+      color: var(--text-muted);
+      width: 18px;
+      flex-shrink: 0;
+    }
+    .hot-list li:nth-child(1) .rank { color: var(--accent); }
+    .hot-list li:nth-child(2) .rank { color: #d4782a; }
+    .hot-list li:nth-child(3) .rank { color: #c9a227; }
+    .hot-list a {
+      color: var(--text-secondary);
+      transition: color 0.15s;
+      line-height: 1.4;
+    }
+    .hot-list a:hover { color: var(--accent); }
+    .aside-card .update-feed {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .aside-card .update-feed li {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      padding-left: 12px;
+      position: relative;
+    }
+    .aside-card .update-feed li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 7px;
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .aside-card .update-feed .feed-date {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    /* 投稿互动板块 */
+    .submit-panel {
+      background: linear-gradient(135deg, var(--primary) 0%, #2a1a30 100%);
+      border-radius: var(--radius-banner);
+      padding: 24px 26px;
+      color: #ddd;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      justify-content: space-between;
+    }
+    .submit-panel h3 {
+      font-size: 17px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .submit-panel p {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.6;
+    }
+    .submit-panel .btn-submit {
+      background: var(--gold);
+      color: var(--primary-dark);
+      border: none;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-weight: 800;
+      font-size: 13.5px;
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .submit-panel .btn-submit:hover {
+      background: #ffd83d;
+      transform: translateY(-2px);
+    }
+
+    /* 页脚 */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #999;
+      padding: 42px 28px 28px;
+      font-size: 13px;
+    }
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand .logo-text {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .footer-brand p {
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: #888;
+      max-width: 300px;
+    }
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 12.5px;
+      color: #888;
+      padding: 3px 0;
+      transition: color 0.18s;
+    }
+    .footer-col a:hover { color: #ddd; }
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 28px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid #2a2a3a;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 11.5px;
+      color: #666;
+    }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      right: 24px; bottom: 24px;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      font-size: 18px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(233,69,96,0.4);
+      z-index: 900;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .back-top.show { display: flex; }
+    .back-top:hover { background: #d13a52; transform: translateY(-3px); }
+    .back-top:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+    /* 搜索无结果 */
+    .no-result {
+      display: none;
+      padding: 20px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+      background: var(--panel);
+      border-radius: var(--radius-card);
+    }
+    .no-result.show { display: block; }
+
+    /* 移动端遮罩 */
+    .mobile-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      z-index: 998;
+    }
+    .mobile-overlay.show { display: block; }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 1024px) {
+      .main-wrap {
+        grid-template-columns: 1fr 240px;
+      }
+      .left-channel {
+        display: none;
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 48px 28px 40px;
+      }
+      .hero-content h1 { font-size: 32px; }
+      .hero-visual { display: none; }
+      .category-grid { grid-template-columns: repeat(4, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 740px) {
+      .announce-bar {
+        font-size: 11.5px;
+        gap: 12px;
+        padding: 6px 12px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+      }
+      .announce-bar::-webkit-scrollbar { display: none; }
+      .header-inner {
+        height: 54px;
+        padding: 0 14px;
+        gap: 14px;
+      }
+      .main-nav {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; bottom: 0;
+        width: 240px;
+        background: var(--panel);
+        flex-direction: column;
+        padding: 70px 14px 20px;
+        box-shadow: 0 0 30px rgba(0,0,0,0.2);
+        z-index: 999;
+        overflow-y: auto;
+        border-radius: 0 14px 14px 0;
+      }
+      .main-nav.open { display: flex; }
+      .main-nav a {
+        padding: 10px 14px;
+        font-size: 15px;
+        border-radius: var(--radius-btn);
+      }
+      .hamburger { display: flex; }
+      .search-box input { width: 90px; }
+      .hero-content h1 { font-size: 26px; }
+      .hero-desc { font-size: 13.5px; }
+      .hero-inner { padding: 36px 18px 32px; }
+      .hero-actions { flex-direction: column; }
+      .btn-primary, .btn-outline { width: 100%; text-align: center; }
+      .main-wrap {
+        grid-template-columns: 1fr;
+        padding: 24px 16px 48px;
+        gap: 20px;
+      }
+      .right-aside {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .news-item { flex-direction: column; }
+      .news-item .news-thumb { width: 100%; height: 120px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+      .submit-panel { flex-direction: column; align-items: flex-start; }
+      .back-top { right: 14px; bottom: 14px; width: 38px; height: 38px; font-size: 16px; }
+      .section-header h2 { font-size: 18px; }
+      .deep-dive { padding: 20px 16px; }
+      .timeline::before { left: 20px; }
+      .timeline-dot { margin-left: 0; }
+    }
+    @media (max-width: 400px) {
+      .card-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar" id="announceBar">
+  <span class="brand-tag">OnlyTease视频合集</span>
+  <span class="announce-item">
+    <span class="announce-date">11月6日</span>
+    <span class="announce-dot"></span>
+    <span>新增《Lily 复古蕾丝连裤袜》第4集</span>
+  </span>
+  <span class="announce-item">
+    <span class="announce-date">11月5日</span>
+    <span class="announce-dot"></span>
+    <span>更新模特档案 12 位</span>
+  </span>
+  <span class="announce-item">
+    <span class="announce-dot"></span>
+    <span>本周精选 38 部单集</span>
+  </span>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <div class="logo-area">
+      <svg class="logo-icon" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+        <rect width="34" height="34" rx="9" fill="#1a1a2e"/>
+        <circle cx="17" cy="17" r="9.5" stroke="#e94560" stroke-width="2.4"/>
+        <path d="M12.5 17h9M17 12.5v9" stroke="#f5c518" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">OnlyTease<em>视频合集</em></span>
+    </div>
+    <nav class="main-nav" id="mainNav" aria-label="主导航">
+      <a href="#overview">领域概览</a>
+      <a href="#featured">精选单集</a>
+      <a href="#updates">最新更新</a>
+      <a href="#categories">分类索引</a>
+      <a href="#deep-dive">深度解析</a>
+      <a href="#guide">观看指南</a>
+      <a href="#faq">常见问答</a>
+      <a href="#comments">用户评论</a>
+      <a href="#news">相关资讯</a>
+      <a href="#related">相关推荐</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <input type="search" id="searchInput" placeholder="搜索模特或单集…" aria-label="搜索页面内容">
+        <button type="button" id="searchBtn">搜索</button>
+      </div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- 移动端遮罩 -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1>OnlyTease视频合集</h1>
+      <p class="hero-desc">汇集丝袜与内衣模特写真视频的单集档案、幕后花絮、模特作品年表，以及订阅平台与观看渠道的横向比较。按模特、按专辑、按拍摄年份三种路径检索，每条记录标明片长、发行日期与所属系列。</p>
+      <div class="hero-actions">
+        <a href="#featured" class="btn-primary">浏览精选单集</a>
+        <a href="#categories" class="btn-outline">按模特分类查找</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 340 300" fill="none">
+        <defs>
+          <linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#e94560" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#f5c518" stop-opacity="0.7"/>
+          </linearGradient>
+        </defs>
+        <rect x="30" y="30" width="280" height="190" rx="16" fill="#2d2d44" stroke="#e94560" stroke-width="1.5"/>
+        <rect x="48" y="48" width="244" height="126" rx="8" fill="#1a1a2e"/>
+        <circle cx="170" cy="111" r="34" fill="none" stroke="url(#heroGrad)" stroke-width="3"/>
+        <polygon points="158,93 158,129 188,111" fill="#f5c518" opacity="0.9"/>
+        <rect x="48" y="184" width="120" height="10" rx="5" fill="#3a3a52"/>
+        <rect x="48" y="200" width="80" height="8" rx="4" fill="#3a3a52" opacity="0.6"/>
+        <rect x="182" y="184" width="60" height="24" rx="12" fill="#e94560" opacity="0.8"/>
+        <text x="212" y="200" text-anchor="middle" fill="#fff" font-size="10" font-weight="700">合集</text>
+        <rect x="30" y="240" width="280" height="36" rx="10" fill="#2d2d44" stroke="#3a3a52" stroke-width="1"/>
+        <circle cx="54" cy="258" r="6" fill="#e94560" opacity="0.7"/>
+        <circle cx="76" cy="258" r="6" fill="#f5c518" opacity="0.5"/>
+        <circle cx="98" cy="258" r="6" fill="#e94560" opacity="0.3"/>
+        <rect x="118" y="254" width="140" height="8" rx="4" fill="#3a3a52"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 主内容区：三栏门户 -->
+<div class="main-wrap">
+
+  <!-- 左频道索引 -->
+  <aside class="left-channel" id="channelNav" aria-label="频道索引">
+    <div class="channel-title">频道索引</div>
+    <a href="#overview" class="active">领域概览</a>
+    <a href="#featured">精选单集</a>
+    <a href="#updates">最新更新</a>
+    <a href="#categories">分类索引</a>
+    <a href="#deep-dive">深度解析</a>
+    <a href="#guide">观看指南</a>
+    <a href="#faq">常见问答</a>
+    <a href="#comments">用户评论</a>
+    <a href="#news">相关资讯</a>
+    <a href="#related">相关推荐</a>
+    <a href="#timeline">发行时间线</a>
+    <a href="#submit">投稿互动</a>
+  </aside>
+
+  <!-- 中主内容 -->
+  <main class="center-main" id="mainContent">
+
+    <!-- 1. 领域概览 -->
+    <section class="section" id="overview">
+      <div class="section-header">
+        <h2>丝袜写真视频的品类与当前看点</h2>
+        <span class="section-note">2026年11月更新</span>
+      </div>
+      <div class="overview-text">
+        <p>OnlyTease 以丝袜、连裤袜、蕾丝内衣为主要造型元素，内容形态以单集短片为主，每集通常 8 到 15 分钟，固定模特出镜。按发行渠道分为官网单集、会员限定花絮和合辑剪辑三个层级。模特阵容从 2005 年前后活跃的经典面孔到 2024 年后加入的新人，跨度超过二十年。</p>
+        <p>当前值得关注的几条线索：<strong>复古系列</strong>在 2025 年下半年重新整理了一批 2010 年前后的老片，画质修复到 1080p，编号以“Archive”开头；<strong>幕后花絮</strong>栏目从 2026 年 9 月起改为每月两更，单条时长 5 到 8 分钟，收录拍摄间隙的对话与造型调整过程；<strong>模特作品年表</strong>页面在 10 月新增了按鞋履类型筛选的入口，细高跟、厚底鞋、平底芭蕾鞋三类分别对应不同拍摄场景。</p>
+        <p>新人方面，2026 年春季加入的 Mia、Elena 和 Harper 三人各自完成了 6 到 8 集的首年拍摄，其中 Mia 的《黑色蕾丝长筒袜》系列在站内播放量排进年度前二十。老片修复计划目前覆盖 2008 至 2013 年的 47 部单集，预计 2027 年春季完成全部 120 部的 4K 重制。</p>
+      </div>
+    </section>
+
+    <!-- 2. 精选内容推荐 -->
+    <section class="section" id="featured">
+      <div class="section-header">
+        <h2>本周精选单集与特色专辑</h2>
+        <span class="section-note">共 8 部</span>
+      </div>
+      <div class="card-grid">
+        <article class="content-card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/ot-lily-01/400/300" alt="Lily 复古蕾丝连裤袜第4集剧照" width="400" height="300" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Lily《复古蕾丝连裤袜》第4集</h3>
+            <div class="card-tags">
+              <span class="tag">复古系列</span>
+              <span class="tag gold">1080p修复</span>
+              <span class="tag dark">11月6日</span>
+            </div>
+            <p class="card-desc">Lily 穿 1980 年代风格的宽口蕾丝连裤袜，在仿旧公寓布景中完成三段式拍摄，包含一段 2 分钟的造型讲解。</p>
+            <div class="card-meta">
+              <span class="hot">🔥 站内周榜第 3</span>
+              <span>12 分钟</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/ot-mia-02/400/300" alt="Mia 黑色蕾丝长筒袜系列第6集剧照" width="400" height="300" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Mia《黑色蕾丝长筒袜》第6集</h3>
+            <div class="card-tags">
+              <span class="tag">新人热播</span>
+              <span class="tag gold">年度前20</span>
+            </div>
+            <p class="card-desc">Mia 在秋季户外场景中搭配及膝长筒袜与乐福鞋，镜头以自然光为主，结尾包含一段 90 秒的行走镜头。</p>
+            <div class="card-meta">
+              <span class="hot">🔥 播放 4.2 万</span>
+              <span>10 分钟</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/ot-elena-03/400/300" alt="Elena 厚底鞋与网袜搭配特辑剧照" width="400" height="300" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Elena《厚底鞋×网袜》搭配特辑</h3>
+            <div class="card-tags">
+              <span class="tag">鞋履专题</span>
+              <span class="tag dark">10月28日</span>
+            </div>
+            <p class="card-desc">Elena 用三双不同高度厚底鞋搭配黑色网袜，对比脚踝角度与腿部线条变化，穿插 3 个造型切换的完整过程。</p>
+            <div class="card-meta">
+              <span class="hot">🔥 收藏 1,860</span>
+              <span>14 分钟</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/ot-harper-04/400/300" alt="Harper 白色蕾丝吊带袜幕后花絮照" width="400" height="300" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Harper《白色蕾丝吊带袜》幕后花絮</h3>
+            <div class="card-tags">
+              <span class="tag">幕后花絮</span>
+              <span class="tag dark">11月2日</span>
+            </div>
+            <p class="card-desc">拍摄间隙 Harper 与造型师讨论吊带松紧调节，展示了三种固定夹扣的差别，顺带吐槽了第一套服装的肩带滑落问题。</p>
+            <div class="card-meta">
+              <span>7 分钟</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/ot-sophie-05/400/300" alt="Sophie 经典黑色连裤袜第12集剧照" width="400" height="300" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Sophie《经典黑色连裤袜》第12集</h3>
+            <div class="card-tags">
+              <span class="tag">经典系列</span>
+              <span class="tag gold"> Archive 修复</span>
+            </div>
+            <p class="card-desc">2012 年发行的经典单集重制版，原片 720p 修复至 1080p，保留原始场景与服装，仅调整了色彩平衡与音频降噪。</p>
+            <div class="card-meta">
+              <span>11 分钟</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/ot-nina-06/400/300" alt="Nina 渔网袜与短靴街头特辑剧照" width="400" height="300" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Nina《渔网袜×短靴》街头特辑</h3>
+            <div class="card-tags">
+              <span class="tag">户外拍摄</span>
+              <span class="tag dark">10月31日</span>
+            </div>
+            <p class="card-desc">Nina 在夜晚街区取景，渔网袜搭配切尔西短靴，画面以霓虹灯牌为背景，收录了 4 个不同机位的行走段落。</p>
+            <div class="card-meta">
+              <span class="hot">🔥 站内新片榜第 6</span>
+              <span>9 分钟</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/ot-chloe-07/400/300" alt="Chloe 芭蕾平底鞋与白色短袜第2集剧照" width="400" height="300" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Chloe《芭蕾平底鞋×白短袜》第2集</h3>
+            <div class="card-tags">
+              <span class="tag">平底鞋系列</span>
+              <span class="tag dark">10月25日</span>
+            </div>
+            <p class="card-desc">Chloe 以舞蹈教室为背景，用白色短袜搭配芭蕾平底鞋，镜头重点在脚背弧度与地面动作的衔接。</p>
+            <div class="card-meta">
+              <span>8 分钟</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card">
+          <div class="card-img">
+            <img src="https://picsum.photos/seed/ot-jade-08/400/300" alt="Jade 酒红色丝绒连裤袜冬季特辑剧照" width="400" height="300" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h3>Jade《酒红丝绒连裤袜》冬季特辑</h3>
+            <div class="card-tags">
+              <span class="tag">冬季限定</span>
+              <span class="tag gold">4K 首播</span>
+            </div>
+            <p class="card-desc">Jade 在壁炉布景中穿酒红色丝绒连裤袜，搭配同色系高跟鞋，全片 4K 拍摄，光影以暖调为主。</p>
+            <div class="card-meta">
+              <span class="hot">🔥 4K 版播放 1.1 万</span>
+              <span>13 分钟</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. 最新更新 -->
+    <section class="section" id="updates">
+      <div class="section-header">
+        <h2>11 月第一周更新记录</h2>
+        <span class="section-note">10 条</span>
+      </div>
+      <div class="update-list">
+        <div class="update-item">
+          <span class="update-date">11月7日</span>
+          <span class="update-name">Lily 复古蕾丝连裤袜第4集</span>
+          <span class="update-summary">1080p 修复版上线，新增 2 分钟造型讲解片段</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月6日</span>
+          <span class="update-name">模特档案·Mia</span>
+          <span class="update-summary">补充 2026 年春季加入后的全部 8 集作品列表与拍摄日期</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月5日</span>
+          <span class="update-name">Harper 白色蕾丝吊带袜幕后花絮</span>
+          <span class="update-summary">时长 7 分 22 秒，收录吊带夹扣调节的三种方式</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月4日</span>
+          <span class="update-name">Elena 厚底鞋×网袜搭配特辑</span>
+          <span class="update-summary">新增章节标记，可直接跳转至三双鞋的对比段落</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月3日</span>
+          <span class="update-name">Archive 修复计划进度页</span>
+          <span class="update-summary">更新至第 47 部，新增 2010 年 6 部单集的修复前后对比截图</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月2日</span>
+          <span class="update-name">Nina 渔网袜×短靴街头特辑</span>
+          <span class="update-summary">户外夜景拍摄，4 个机位版本合并为一条 9 分钟正片</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">11月1日</span>
+          <span class="update-name">Jade 酒红丝绒连裤袜冬季特辑</span>
+          <span class="update-summary">4K 首播，同步上线 HDR 版本，播放页新增画质切换按钮</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月30日</span>
+          <span class="update-name">Sophie 经典黑色连裤袜第12集</span>
+          <span class="update-summary">原片 720p 修复至 1080p，音频降噪处理完成</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月28日</span>
+          <span class="update-name">Chloe 芭蕾平底鞋×白短袜第2集</span>
+          <span class="update-summary">舞蹈教室场景，新增脚背特写机位与地面动作解析</span>
+        </div>
+        <div class="update-item">
+          <span class="update-date">10月25日</span>
+          <span class="update-name">造型档案·蕾丝连裤袜</span>
+          <span class="update-summary">按宽口、窄口、提花三类整理 2020 至 2026 年出现的 31 款连裤袜</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="section" id="categories">
+      <div class="section-header">
+        <h2>按模特与造型类型查找</h2>
+        <span class="section-note">8 个分类</span>
+      </div>
+      <div class="category-grid">
+        <a href="#featured" class="category-item">黑色连裤袜<span class="cat-count">86 部</span></a>
+        <a href="#featured" class="category-item">蕾丝长筒袜<span class="cat-count">52 部</span></a>
+        <a href="#featured" class="category-item">渔网袜<span class="cat-count">34 部</span></a>
+        <a href="#featured" class="category-item">吊带袜<span class="cat-count">41 部</span></a>
+        <a href="#featured" class="category-item">厚底鞋搭配<span class="cat-count">28 部</span></a>
+        <a href="#featured" class="category-item">平底鞋×短袜<span class="cat-count">19 部</span></a>
+        <a href="#featured" class="category-item">复古系列<span class="cat-count">47 部</span></a>
+        <a href="#featured" class="category-item">幕后花絮<span class="cat-count">63 条</span></a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析 -->
+    <section class="section" id="deep-dive">
+      <div class="section-header">
+        <h2>单集质量的三层拆解：画质、造型与镜头语言</h2>
+      </div>
+      <div class="deep-dive">
+        <h3>画质修复的边界：哪些老片值得重制，哪些不值得</h3>
+        <p>Archive 计划从 2025 年 3 月启动，首批纳入的 47 部单集中有 12 部是 2008 至 2010 年的 720p 或 DVD 源。判断一部老片是否值得 4K 重制，内部使用三类标准：原始母带的码率是否高于 8 Mbps、拍摄时是否使用固定机位、服装纹理是否依赖近距离特写。以 Sophie 第12集为例，原始素材码率 9.2 Mbps，场景固定，连裤袜的编织纹理在近景中占比高，修复后细节提升明显。<strong>反例是 2007 年的《黑色网袜楼梯间》</strong>，母带码率仅 4.5 Mbps，手持镜头多，修复后噪点反而被放大，最终只做了 1080p 轻度降噪。</p>
+        <p>已公开的修复进度表显示，2026 年 11 月完成 47 部，剩余 73 部计划在 2027 年 4 月前分批上线。其中 2011 至 2013 年的 28 部母带保存较好，预计修复成功率较高；2008 至 2010 年的 19 部中有 6 部因母带丢失或损坏，仅能以 720p 原样保留。</p>
+
+        <h3>造型搭配的变量：鞋跟高度如何改变镜头构图</h3>
+        <p>同一套连裤袜搭配不同鞋跟，拍摄时的机位高度和镜头焦段需要调整。以 Elena 的厚底鞋特辑为例，三双鞋的跟高分别为 6cm、10cm 和 14cm，摄影师在 10cm 组使用低机位仰拍以拉长腿部线条，14cm 组则改用平视中景，避免鞋底过度占据画幅。站内 2026 年 10 月更新的造型档案里，按鞋履类型筛选的入口正是基于这个逻辑建立。</p>
+        <ul>
+          <li><strong>细高跟（8cm 以上）</strong>：多用于棚拍近景，镜头焦段集中在 50mm 至 85mm，突出脚踝与鞋跟的衔接。</li>
+          <li><strong>厚底鞋（5cm 至 12cm）</strong>：户外与街头场景常见，机位偏低，广角镜头使用率上升。</li>
+          <li><strong>平底鞋（3cm 以下）</strong>：舞蹈教室、居家布景为主，以中景和全身镜头记录地面动作。</li>
+        </ul>
+
+        <h3>“值得看”的判断可以拆成三项核对</h3>
+        <p>站内评分与收藏数并不总是同步。以 2026 年 10 月的数据为例，Nina 街头特辑播放量 2.8 万，收藏率 6.7%；Elena 厚底鞋特辑播放量 1.9 万，收藏率 9.8%。后者的收藏率更高，原因在于章节标记让用户可以快速定位到鞋履对比段落，重复观看的动机更强。</p>
+        <blockquote>把“值得看”拆开：第一，画质是否达到 1080p 且修复来源明确；第二，造型是否有可辨识的搭配逻辑（鞋履、袜型、场景三者是否自洽）；第三，单集是否提供可重复查看的段落（造型讲解、对比镜头、幕后对话）。三项中满足两项以上，重复观看的概率明显上升。</blockquote>
+        <p>2026 年 9 月改版后的幕后花絮栏目，单条时长从 3 分钟延长到 5 至 8 分钟，正是为了增加“可重复查看的段落”。10 月上线的新片中，带章节标记的 11 部平均收藏率为 8.2%，未带标记的 7 部平均收藏率为 5.1%。</p>
+      </div>
+    </section>
+
+    <!-- 6. 观看指南 -->
+    <section class="section" id="guide">
+      <div class="section-header">
+        <h2>按顺序观看与判断投入时间的方法</h2>
+      </div>
+      <div class="guide-steps">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>先确认单集类型：正片、花絮还是合辑剪辑</h3>
+            <p>正片通常 8 至 15 分钟，有完整造型与场景；花絮 5 至 8 分钟，以拍摄间隙对话为主；合辑剪辑 20 分钟以上，由多集片段重新拼接，适合快速浏览某位模特的风格跨度。按需求选类型，比按播放量排序更有效。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>用造型档案缩小范围</h3>
+            <p>站内造型档案按袜型（连裤袜、长筒袜、渔网袜、吊带袜）和鞋履（细高跟、厚底鞋、平底鞋）交叉分类。如果对某类搭配特别感兴趣，直接从分类入口进入，比在全部单集里翻找节省时间。目前档案覆盖 2020 年之后 31 款连裤袜的详细记录。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>比较同一模特的不同年份作品</h3>
+            <p>模特作品年表页按年份排列单集，可以直观看到同一模特在不同时期的造型变化。例如 Sophie 在 2012 年的连裤袜搭配以宽口蕾丝为主，2021 年后的作品更多使用窄口提花款式。这种纵向对比比横向浏览热门榜单更能判断个人偏好。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>关注章节标记与修复标注</h3>
+            <p>带章节标记的单集可以跳转到具体段落，适合只想看造型讲解或鞋履对比的观众。修复标注则提示画质来源：标有“Archive 修复”的为 1080p 重制，标有“4K 首播”的为原生 4K 拍摄。两者在细节呈现上有明显差别，按设备条件选择即可。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section" id="faq">
+      <div class="section-header">
+        <h2>关于单集内容与观看的常见问题</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>复古系列和经典系列有什么区别？</summary>
+          <div class="faq-answer">复古系列指 2025 年下半年启动的老片修复计划，编号以“Archive”开头，覆盖 2008 至 2013 年的单集，目前完成 47 部。经典系列则指 2012 年前后发行的原始单集，部分未进入修复计划，画质仍为 720p。两者有重叠：Sophie 第12集既属于经典系列，也已被纳入复古修复。</div>
+        </details>
+        <details>
+          <summary>幕后花絮每月更新几次？</summary>
+          <div class="faq-answer">2026 年 9 月起改为每月两更，分别在月初和月中上线。单条时长 5 至 8 分钟，内容为拍摄间隙的对话、造型调整和摄影师的技术说明。10 月上线的 Harper 吊带袜花絮中，包含了三种固定夹扣的对比演示。</div>
+        </details>
+        <details>
+          <summary>为什么有些单集没有 4K 版本？</summary>
+          <div class="faq-answer">4K 版本需要原生 4K 拍摄或高质量母带支持。2008 至 2010 年的部分单集母带码率低于 8 Mbps，修复至 4K 后噪点反而被放大，因此只提供 1080p 修复版。2011 年之后的母带保存较好，4K 重制成功率更高。目前 4K 首播的新片集中在 2025 年之后的制作。</div>
+        </details>
+        <details>
+          <summary>模特作品年表怎么查看？</summary>
+          <div class="faq-answer">模特档案页按年份排列该模特参与的全部单集，每条记录标明发行日期、片长和所属系列。2026 年 10 月新增了按鞋履类型筛选的入口，可以只看细高跟、厚底鞋或平底鞋搭配的单集。Mia 的档案页目前收录她 2026 年春季加入后的 8 集作品。</div>
+        </details>
+        <details>
+          <summary>同一造型在不同单集里重复出现正常吗？</summary>
+          <div class="faq-answer">正常。部分连裤袜和吊带袜款式会在不同模特、不同场景中重复使用，尤其是 Archive 修复计划覆盖的老片。2020 年之后的新片重复率下降，造型档案中记录的 31 款连裤袜里，有 9 款出现在两集以上。重复使用不等于内容重复，场景、机位和搭配鞋履的差异仍然明显。</div>
+        </details>
+        <details>
+          <summary>单集时长一般多长，合辑剪辑有什么不同？</summary>
+          <div class="faq-answer">正片单集通常 8 至 15 分钟，幕后花絮 5 至 8 分钟。合辑剪辑在 20 分钟以上，由多集片段按主题重新拼接，适合快速浏览某位模特的风格跨度。合辑剪辑不包含新的拍摄内容，画面来源为已发行的单集。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="section" id="comments">
+      <div class="section-header">
+        <h2>观众对具体单集的讨论</h2>
+        <span class="section-note">16 条</span>
+      </div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">L</span>
+            <span class="comment-nick">lily_fan_2019</span>
+            <span class="comment-date">11月7日</span>
+          </div>
+          <p class="comment-text">Lily 第4集那段造型讲解值回时间，宽口蕾丝怎么卷边讲得很清楚。正片反而短了点。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">M</span>
+            <span class="comment-nick">mia_stan</span>
+            <span class="comment-date">11月6日</span>
+          </div>
+          <p class="comment-text">Mia 第6集户外光太硬了，有几帧过曝。但行走镜头确实好看，乐福鞋配长筒袜的比例比棚拍自然。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">E</span>
+            <span class="comment-nick">elena_watch</span>
+            <span class="comment-date">11月6日</span>
+          </div>
+          <p class="comment-text">三双厚底鞋对比那段反复看了三遍。14cm 那双的鞋底纹路拍得很细，低机位没白费。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">H</span>
+            <span class="comment-nick">harper_h</span>
+            <span class="comment-date">11月5日</span>
+          </div>
+          <p class="comment-text">花絮里吐槽肩带滑落那段笑死，真实拍摄现场大概就这样。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">S</span>
+            <span class="comment-nick">sophie_archive</span>
+            <span class="comment-date">11月4日</span>
+          </div>
+          <p class="comment-text">Sophie 第12集修复前后对比截图看过了，1080p 确实比原版干净，但色彩暖了一点，原版偏冷。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">N</span>
+            <span class="comment-nick">night_owl_nina</span>
+            <span class="comment-date">11月3日</span>
+          </div>
+          <p class="comment-text">Nina 街头那集霓虹灯背景有点晃眼，不过渔网袜配短靴的层次感拍出来了。9 分钟短了点。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">C</span>
+            <span class="comment-nick">chloe_ballet</span>
+            <span class="comment-date">11月2日</span>
+          </div>
+          <p class="comment-text">芭蕾平底鞋那集脚背特写太多了，想看全身构图。第2集比第1集好，地面动作有进步。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">J</span>
+            <span class="comment-nick">jade_4k</span>
+            <span class="comment-date">11月1日</span>
+          </div>
+          <p class="comment-text">酒红丝绒连裤袜 4K 版值得单独开个 HDR 屏看，暗部细节比 1080p 版本多不少。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">R</span>
+            <span class="comment-nick">retro_hunter</span>
+            <span class="comment-date">10月31日</span>
+          </div>
+          <p class="comment-text">Archive 计划进度太慢了，47/120，2027 年春天真能全部搞完？2008 年那几部母带都烂了吧。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">K</span>
+            <span class="comment-nick">knee_high_king</span>
+            <span class="comment-date">10月30日</span>
+          </div>
+          <p class="comment-text">长筒袜和连裤袜的镜头语言完全不一样，前者更依赖脚踝角度，后者看腰线。站内分类做对了。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">B</span>
+            <span class="comment-nick">boots_and_nets</span>
+            <span class="comment-date">10月29日</span>
+          </div>
+          <p class="comment-text">Elena 那集收藏率 9.8% 不奇怪，章节标记一加，想看哪段点哪段，这功能早该上了。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">F</span>
+            <span class="comment-nick">fishnet_forever</span>
+            <span class="comment-date">10月28日</span>
+          </div>
+          <p class="comment-text">渔网袜孔径大小在不同单集里差别很大，可惜档案里没单独列这一项，希望以后加上。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">D</span>
+            <span class="comment-nick">dance_floor_chloe</span>
+            <span class="comment-date">10月27日</span>
+          </div>
+          <p class="comment-text">舞蹈教室那个场景的光比棚拍舒服，白短袜的纹理也拍清楚了。建议多拍这类自然布景。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">T</span>
+            <span class="comment-nick">thigh_high_tom</span>
+            <span class="comment-date">10月26日</span>
+          </div>
+          <p class="comment-text">吊带袜的夹扣细节之前没人拍，Harper 花絮里那段演示挺有用。就是 7 分钟太短。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">W</span>
+            <span class="comment-nick">winter_jade</span>
+            <span class="comment-date">10月25日</span>
+          </div>
+          <p class="comment-text">壁炉布景加酒红丝绒，冬天看这个氛围刚好。4K 版文件有点大，加载慢了几秒。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head">
+            <span class="comment-avatar">P</span>
+            <span class="comment-nick">pump_heel_pete</span>
+            <span class="comment-date">10月24日</span>
+          </div>
+          <p class="comment-text">细高跟组用 50mm 到 85mm 焦段，这个在摄影笔记里对得上。厚底鞋组广角用得多，所以边缘有点变形。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="section" id="news">
+      <div class="section-header">
+        <h2>近期发行与修复动态</h2>
+      </div>
+      <div class="news-list">
+        <article class="news-item">
+          <div class="news-thumb">
+            <img src="https://picsum.photos/seed/ot-news-arch/600/400" alt="Archive修复计划进度截图" width="600" height="400" loading="lazy">
+          </div>
+          <div class="news-body">
+            <h3>Archive 修复计划完成 47 部，剩余 73 部分批至 2027 年</h3>
+            <div class="news-date">2026年11月3日</div>
+            <p>2011 至 2013 年的 28 部母带保存较好，将优先处理；2008 至 2010 年的 19 部中有 6 部因母带损坏仅保留 720p 版本。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb">
+            <img src="https://picsum.photos/seed/ot-news-bts/600/400" alt="幕后花絮拍摄现场照" width="600" height="400" loading="lazy">
+          </div>
+          <div class="news-body">
+            <h3>幕后花絮栏目 9 月起改为月更两集，单条时长延至 5 至 8 分钟</h3>
+            <div class="news-date">2026年10月29日</div>
+            <p>10 月上线 3 条花絮，平均时长 6 分 40 秒，较 8 月的 3 分 20 秒翻倍。内容重心转向造型调整与摄影师技术说明。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb">
+            <img src="https://picsum.photos/seed/ot-news-mia/600/400" alt="Mia户外拍摄现场花絮照" width="600" height="400" loading="lazy">
+          </div>
+          <div class="news-body">
+            <h3>Mia 首年 8 集作品完成，第6集进入站内年度播放前二十</h3>
+            <div class="news-date">2026年10月26日</div>
+            <p>2026 年春季加入的三人中，Mia 的黑色蕾丝长筒袜系列播放量最高，第6集单集播放 4.2 万，收藏 1,860 次。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb">
+            <img src="https://picsum.photos/seed/ot-news-shoe/600/400" alt="鞋履分类筛选界面截图" width="600" height="400" loading="lazy">
+          </div>
+          <div class="news-body">
+            <h3>模特作品年表新增鞋履筛选，细高跟、厚底鞋、平底鞋三类</h3>
+            <div class="news-date">2026年10月22日</div>
+            <p>筛选基于 2020 年后 31 款连裤袜的造型档案数据，厚底鞋类目下当前收录 28 部单集，平底鞋×短袜类目收录 19 部。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb">
+            <img src="https://picsum.photos/seed/ot-news-chloe/600/400" alt="Chloe舞蹈教室拍摄现场照" width="600" height="400" loading="lazy">
+          </div>
+          <div class="news-body">
+            <h3>Chloe 芭蕾平底鞋系列第2集上线，新增脚背特写机位</h3>
+            <div class="news-date">2026年10月25日</div>
+            <p>第2集在舞蹈教室拍摄，地面动作段落较第1集增加 40 秒，镜头重点转向脚背弧度与平底鞋的贴合关系。</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <div class="news-thumb">
+            <img src="https://picsum.photos/seed/ot-news-4k/600/400" alt="4K画质切换界面截图" width="600" height="400" loading="lazy">
+          </div>
+          <div class="news-body">
+            <h3>Jade 冬季特辑 4K 首播，同步上线 HDR 版本与画质切换</h3>
+            <div class="news-date">2026年11月1日</div>
+            <p>播放页新增画质切换按钮，支持 1080p、4K SDR 和 4K HDR 三档。HDR 版本在壁炉场景的暗部细节提升明显。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="section" id="related">
+      <div class="section-header">
+        <h2>按具体方向继续浏览</h2>
+      </div>
+      <div class="related-tags">
+        <a href="#featured">Lily 复古蕾丝连裤袜系列</a>
+        <a href="#featured">Mia 黑色蕾丝长筒袜第6集</a>
+        <a href="#featured">Elena 厚底鞋三双对比</a>
+        <a href="#featured">Sophie 2012 经典集修复版</a>
+        <a href="#featured">Nina 夜间街头渔网袜</a>
+        <a href="#featured">Harper 吊带夹扣三种方式</a>
+        <a href="#featured">Chloe 舞蹈教室平底鞋</a>
+        <a href="#featured">Jade 酒红丝绒 4K HDR</a>
+        <a href="#updates">Archive 修复进度 47/120</a>
+        <a href="#deep-dive">画质修复的三类判断标准</a>
+      </div>
+    </section>
+
+    <!-- 11. 补充板块：发行时间线 -->
+    <section class="section" id="timeline">
+      <div class="section-header">
+        <h2>2026 年秋季发行时间线</h2>
+        <span class="section-note">9 条</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Lily 复古蕾丝连裤袜第4集</h3>
+            <span class="tl-date">2026年11月6日</span>
+            <p>1080p 修复版，新增 2 分钟造型讲解，站内周榜第 3。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Harper 白色蕾丝吊带袜幕后花絮</h3>
+            <span class="tl-date">2026年11月5日</span>
+            <p>7 分 22 秒，收录三种固定夹扣的调节方式。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Jade 酒红丝绒连裤袜冬季特辑</h3>
+            <span class="tl-date">2026年11月1日</span>
+            <p>4K HDR 首播，壁炉布景，暗部细节提升明显。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Nina 渔网袜×短靴街头特辑</h3>
+            <span class="tl-date">2026年10月31日</span>
+            <p>夜间街区取景，4 个机位合并为 9 分钟正片。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Elena 厚底鞋×网袜搭配特辑</h3>
+            <span class="tl-date">2026年10月28日</span>
+            <p>三双厚底鞋对比，章节标记上线，收藏率 9.8%。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Chloe 芭蕾平底鞋×白短袜第2集</h3>
+            <span class="tl-date">2026年10月25日</span>
+            <p>舞蹈教室场景，地面动作段落增加 40 秒。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Sophie 经典黑色连裤袜第12集</h3>
+            <span class="tl-date">2026年10月22日</span>
+            <p>720p 修复至 1080p，音频降噪，色彩暖调调整。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Mia 黑色蕾丝长筒袜第6集</h3>
+            <span class="tl-date">2026年10月18日</span>
+            <p>秋季户外自然光，90 秒行走镜头，播放 4.2 万。</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>造型档案·蕾丝连裤袜 2020-2026 汇总</h3>
+            <span class="tl-date">2026年10月15日</span>
+            <p>31 款连裤袜按宽口、窄口、提花三类整理。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 投稿互动 -->
+    <section class="section" id="submit">
+      <div class="submit-panel">
+        <div>
+          <h3>分享你发现的拍摄细节</h3>
+          <p>如果你注意到某部单集里的造型搭配、机位选择或修复差异，可以提交一条短评。被采纳的细节会收录进造型档案或修复进度页。</p>
+        </div>
+        <button class="btn-submit" type="button" id="submitBtn">提交观察笔记</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧辅助栏 -->
+  <aside class="right-aside" aria-label="辅助信息">
+    <div class="aside-card">
+      <h3>本周播放热榜</h3>
+      <ol class="hot-list">
+        <li><span class="rank">1</span><a href="#featured">Mia 黑色蕾丝长筒袜第6集</a></li>
+        <li><span class="rank">2</span><a href="#featured">Jade 酒红丝绒连裤袜冬季特辑</a></li>
+        <li><span class="rank">3</span><a href="#featured">Lily 复古蕾丝连裤袜第4集</a></li>
+        <li><span class="rank">4</span><a href="#featured">Elena 厚底鞋×网袜搭配特辑</a></li>
+        <li><span class="rank">5</span><a href="#featured">Nina 渔网袜×短靴街头特辑</a></li>
+        <li><span class="rank">6</span><a href="#featured">Harper 白色蕾丝吊带袜花絮</a></li>
+        <li><span class="rank">7</span><a href="#featured">Sophie 经典黑色连裤袜第12集</a></li>
+        <li><span class="rank">8</span><a href="#featured">Chloe 芭蕾平底鞋×白短袜第2集</a></li>
+      </ol>
+    </div>
+    <div class="aside-card">
+      <h3>近 7 天更新</h3>
+      <ul class="update-feed">
+        <li><span class="feed-date">11月7日</span>Lily 第4集修复版上线</li>
+        <li><span class="feed-date">11月6日</span>Mia 档案页补充 8 集列表</li>
+        <li><span class="feed-date">11月5日</span>Harper 吊带袜花絮</li>
+        <li><span class="feed-date">11月4日</span>Elena 特辑章节标记</li>
+        <li><span class="feed-date">11月3日</span>Archive 进度更新至 47 部</li>
+        <li><span class="feed-date">11月2日</span>Nina 街头特辑正片</li>
+      </ul>
+    </div>
+    <div class="aside-card">
+      <h3>修复进度</h3>
+      <p style="font-size:13px;color:var(--text-secondary);line-height:1.7;">47 / 120 部完成 4K 重制<br><span style="font-size:11.5px;color:var(--text-muted)">2011-2013 年 28 部优先处理</span></p>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">OnlyTease视频合集</span>
+      <p>收录 2005 年至今的丝袜与内衣写真单集、幕后花絮和修复版本，按模特、造型和鞋履类型建立索引，供检索与对比。</p>
+    </div>
+    <div class="footer-col">
+      <h4>内容</h4>
+      <a href="#featured">精选单集</a>
+      <a href="#updates">最新更新</a>
+      <a href="#categories">分类索引</a>
+      <a href="#timeline">发行时间线</a>
+    </div>
+    <div class="footer-col">
+      <h4>解读</h4>
+      <a href="#deep-dive">深度解析</a>
+      <a href="#guide">观看指南</a>
+      <a href="#faq">常见问答</a>
+      <a href="#news">相关资讯</a>
+    </div>
+    <div class="footer-col">
+      <h4>互动</h4>
+      <a href="#comments">用户评论</a>
+      <a href="#related">相关推荐</a>
+      <a href="#submit">投稿互动</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>示例内容，日期基准 2026-11-08。条目信息为垂类演示数据。</span>
+    <span>© 2026 OnlyTease视频合集 内容索引</span>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+  (function() {
+    'use strict';
+
+    // 移动端菜单
+    var hamburger = document.getElementById('hamburgerBtn');
+    var mainNav = document.getElementById('mainNav');
+    var overlay = document.getElementById('mobileOverlay');
+
+    function openMenu() {
+      mainNav.classList.add('open');
+      overlay.classList.add('show');
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', '关闭菜单');
+    }
+    function closeMenu() {
+      mainNav.classList.remove('open');
+      overlay.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', '打开菜单');
+    }
+
+    hamburger.addEventListener('click', function() {
+      if (mainNav.classList.contains('open')) { closeMenu(); } else { openMenu(); }
+    });
+    overlay.addEventListener('click', closeMenu);
+
+    // 点击导航链接后收起菜单
+    mainNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 740) closeMenu();
+      });
+    });
+
+    // Esc关闭菜单
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        if (mainNav.classList.contains('open')) closeMenu();
+        var searchInput = document.getElementById('searchInput');
+        if (searchInput && document.activeElement === searchInput) {
+          searchInput.blur();
+        }
+      }
+    });
+
+    // 回到顶部
+    var backTop = document.getElementById('backTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > window.innerHeight) {
+        backTop.classList.add('show');
+      } else {
+        backTop.classList.remove('show');
+      }
+    });
+    backTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 本地搜索过滤
+    var searchInput = document.getElementById('searchInput');
+    var searchBtn = document.getElementById('searchBtn');
+    var mainContent = document.getElementById('mainContent');
+
+    function doSearch() {
+      var query = searchInput.value.trim().toLowerCase();
+      // 清除旧的无结果提示
+      var oldNoResult = document.querySelector('.no-result');
+      if (oldNoResult) oldNoResult.remove();
+
+      var cards = mainContent.querySelectorAll('.content-card, .update-item, .news-item, .faq-list details, .comment-item, .related-tags a, .category-item, .timeline-item, .step-item');
+      var visibleCount = 0;
+
+      cards.forEach(function(el) {
+        if (!query) {
+          el.style.display = '';
+          visibleCount++;
+          return;
+        }
+        var text = el.textContent.toLowerCase();
+        if (text.indexOf(query) !== -1) {
+          el.style.display = '';
+          visibleCount++;
+        } else {
+          el.style.display = 'none';
+        }
+      });
+
+      // 同时处理板块标题（若板块内全隐藏，板块可折叠，但这里保持简单，仅提示无结果）
+      if (query && visibleCount === 0) {
+        var noResult = document.createElement('div');
+        noResult.className = 'no-result show';
+        noResult.textContent = '没有找到与“' + searchInput.value.trim() + '”相关的内容条目，试试其他模特名或袜型关键词。';
+        mainContent.insertBefore(noResult, mainContent.firstChild);
+      }
+    }
+
+    searchBtn.addEventListener('click', doSearch);
+    searchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); doSearch(); }
+    });
+    searchInput.addEventListener('search', function() {
+      if (searchInput.value === '') doSearch();
+    });
+
+    // 左侧导航高亮
+    var sections = document.querySelectorAll('.center-main section[id]');
+    var channelLinks = document.querySelectorAll('.left-channel a');
+
+    function highlightNav() {
+      var scrollPos = window.scrollY + 120;
+      var currentId = '';
+      sections.forEach(function(sec) {
+        if (sec.offsetTop <= scrollPos) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+      channelLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentId) {
+          link.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', highlightNav);
+    window.addEventListener('load', highlightNav);
+
+    // 投稿按钮
+    var submitBtn = document.getElementById('submitBtn');
+    if (submitBtn) {
+      submitBtn.addEventListener('click', function() {
+        submitBtn.textContent = '感谢提交！';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+        setTimeout(function() {
+          submitBtn.textContent = '提交观察笔记';
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+        }, 2200);
+      });
+    }
+
+    // 平滑滚动偏移已由CSS scroll-padding-top处理
+  })();
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "OnlyTease视频合集",
+  "description": "OnlyTease视频合集汇聚丝袜模特写真视频档案，包含经典单集、幕后花絮、模特作品年表与订阅观看指南，适合写真内容爱好者检索与比较。",
+  "inLanguage": "zh-CN",
+  "dateModified": "2026-11-08"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "复古系列和经典系列有什么区别？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "复古系列指 2025 年下半年启动的老片修复计划，编号以“Archive”开头，覆盖 2008 至 2013 年的单集，目前完成 47 部。经典系列则指 2012 年前后发行的原始单集，部分未进入修复计划，画质仍为 720p。两者有重叠：Sophie 第12集既属于经典系列，也已被纳入复古修复。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "幕后花絮每月更新几次？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "2026 年 9 月起改为每月两更，分别在月初和月中上线。单条时长 5 至 8 分钟，内容为拍摄间隙的对话、造型调整和摄影师的技术说明。10 月上线的 Harper 吊带袜花絮中，包含了三种固定夹扣的对比演示。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "为什么有些单集没有 4K 版本？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "4K 版本需要原生 4K 拍摄或高质量母带支持。2008 至 2010 年的部分单集母带码率低于 8 Mbps，修复至 4K 后噪点反而被放大，因此只提供 1080p 修复版。2011 年之后的母带保存较好，4K 重制成功率更高。目前 4K 首播的新片集中在 2025 年之后的制作。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "模特作品年表怎么查看？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "模特档案页按年份排列该模特参与的全部单集，每条记录标明发行日期、片长和所属系列。2026 年 10 月新增了按鞋履类型筛选的入口，可以只看细高跟、厚底鞋或平底鞋搭配的单集。Mia 的档案页目前收录她 2026 年春季加入后的 8 集作品。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "同一造型在不同单集里重复出现正常吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正常。部分连裤袜和吊带袜款式会在不同模特、不同场景中重复使用，尤其是 Archive 修复计划覆盖的老片。2020 年之后的新片重复率下降，造型档案中记录的 31 款连裤袜里，有 9 款出现在两集以上。重复使用不等于内容重复，场景、机位和搭配鞋履的差异仍然明显。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "单集时长一般多长，合辑剪辑有什么不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "正片单集通常 8 至 15 分钟，幕后花絮 5 至 8 分钟。合辑剪辑在 20 分钟以上，由多集片段按主题重新拼接，适合快速浏览某位模特的风格跨度。合辑剪辑不包含新的拍摄内容，画面来源为已发行的单集。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+      </html>
